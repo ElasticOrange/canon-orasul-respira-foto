@@ -17,7 +17,7 @@
 
 	<body>
 		<div id="header">
-
+			@include('partials.header')
 		</div>
 
 		<div id="main">
@@ -25,7 +25,7 @@
 		</div>
 
 		<div id="footer">
-
+			@include('partials.footer')
 		</div>
 
 		<!-- Scripts -->
