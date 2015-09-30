@@ -1,0 +1,34 @@
+#wrapper{	
+	
+}
+
+/*Header*/
+#header{
+	width: 740px;
+	background-color: wheat;
+    margin: auto;
+}
+
+#header ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#header ul li a{
+	text-decoration: none;
+}
+
+#header ul li:hover{
+	background-color: red;
+	background-color: #d00000;
+	border-radius: 3px;
+}
+
+#header ul li{
+	display: inline-block;
+}
+/*/Header*/
+
+/*width: 202px;
+height: 37px;*/

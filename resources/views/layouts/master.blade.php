@@ -16,16 +16,18 @@
 	</head>
 
 	<body>
-		<div id="header">
-			@include('partials.header')
-		</div>
+		<div id="wrapper">
+			<div id="header">
+				@include('partials.header')
+			</div>
 
-		<div id="main">
-			@yield('content')
-		</div>
+			<div id="main">
+				@yield('content')
+			</div>
 
-		<div id="footer">
-			@include('partials.footer')
+			<div id="footer">
+				@include('partials.footer')
+			</div>
 		</div>
 
 		<!-- Scripts -->
@@ -35,6 +37,8 @@
 		<script src="js/plugins.js"></script>
 		<script src="js/main.js"></script>
 
+		@yield('javascript')
+		
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 		<script>
 			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
