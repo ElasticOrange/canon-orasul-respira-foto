@@ -17,16 +17,19 @@
 
 	<body>
 		<div class="wrapper">
-			<div class="header">
-				@include('partials.header')
-			</div>
+			<div class="layer"></div>
+			<div class="content">
+				<div class="header">
+					@include('partials.header')
+				</div>
 
-			<div class="main">
-				@yield('content')
-			</div>
+				<div class="main">
+					@yield('content')
+				</div>
 
-			<div class="footer">
-				@include('partials.footer')
+				<div class="footer">
+					@include('partials.footer')
+				</div>
 			</div>
 		</div>
 
