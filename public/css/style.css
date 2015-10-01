@@ -1,5 +1,5 @@
 body{
-	/*background-color: lightgrey;*/
+	font-family: Kalinga;
 }
 
 *{
@@ -20,7 +20,7 @@ body{
 	width: 100%;
 	height: 634px;
 	background-color: black;
-	opacity: 0.5;
+	opacity: 0.6;
 }
 
 .content{	
@@ -30,7 +30,6 @@ body{
 	left: 0;
 	right: 0;
 	margin: auto;
-	opacity: 1;
 }
 
 /*Header*/
@@ -101,3 +100,75 @@ body{
 	height: 116px;
 }
 /*/Footer*/
+
+/*Main*/
+.motto{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 126px;
+	font-size: 42px;
+	font-weight: 400;
+	text-align: center;
+}
+.motto p{
+	margin:0;
+	line-height: initial;
+}
+
+
+.circle{
+	width: 293px;
+	height: 293px;
+	position: absolute;
+	top: 252px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	border-radius: 50%;
+	background-color:  #d00000;
+}
+
+
+.camera{
+	width: 126px;
+	height: 112px;
+	margin-left:auto;
+	margin-right: auto;
+	margin-top: 46px;
+}
+
+.camera img{
+	width: 126px;
+	height: 112px;
+}
+
+.fiveD{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.fiveD p{
+	margin:0;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.fiveD span{
+	font-weight: 700;
+}
+
+.rules{
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+}
+
+.rules a{
+	font-size: 20px;
+	text-decoration: none;
+}
+/*/Main*/
