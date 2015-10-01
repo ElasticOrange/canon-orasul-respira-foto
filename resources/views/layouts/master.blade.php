@@ -16,16 +16,16 @@
 	</head>
 
 	<body>
-		<div id="wrapper">
-			<div id="header">
+		<div class="wrapper">
+			<div class="header">
 				@include('partials.header')
 			</div>
 
-			<div id="main">
+			<div class="main">
 				@yield('content')
 			</div>
 
-			<div id="footer">
+			<div class="footer">
 				@include('partials.footer')
 			</div>
 		</div>
