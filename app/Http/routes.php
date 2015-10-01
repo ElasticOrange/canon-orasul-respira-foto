@@ -11,4 +11,5 @@
 |
 */
 
+Route::controller('/upload-image', 'UploadImageController');
 Route::controller('/', 'HomeController');
