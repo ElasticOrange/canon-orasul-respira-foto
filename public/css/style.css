@@ -6,17 +6,17 @@ body{
 	color: #ffffff;
 }
 .wrapper{	
-	
+	width: 740px;
+	margin: auto;
+	position: relative;
+	height: 634px;
 }
 
 /*Header*/
 .header{
 	width: 740px;
 	background-color: wheat;
-    margin: auto;
     position: absolute;
-    left: 0;
-    right: 0;
     top: 30px;
 }
 
@@ -61,22 +61,22 @@ body{
 
 /*/Header*/
 
-/*width: 202px;
-height: 37px;*/
 
+/*Footer*/
+.footer{
+	width: 170px;
+	height: 116px;
+	position: absolute;
+	bottom: 30px;
+	right: 0;
+}
 
+.logo{
+	height: 116px;
+}
 
-
-
-/*font-family: Kalinga;
-color: #ffffff;
-font-size: 42.06px;
-font-weight: 400;
-text-align: center;
-font-family: Kalinga;
-color: #ffffff;
-font-size: 42.06px;
-font-weight: 700;
-text-align: center;
-transform: scaleY(1.001); /* width and height properties ommitted due to transform */
-*/
+.logo img{
+	width: 170px;
+	height: 116px;
+}
+/*/Footer*/

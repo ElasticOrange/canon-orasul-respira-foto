@@ -1,3 +1,3 @@
-<div id="logo">
-    <img src="">
+<div class="logo">
+    <img src="img/logo.png">
 </div>
