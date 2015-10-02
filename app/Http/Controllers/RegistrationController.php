@@ -12,7 +12,7 @@ class RegistrationController extends Controller
 
     public function getImages()
     {
-    	return "images";
+    	return view('register.images');
     }
  
     public function getPersonalData()

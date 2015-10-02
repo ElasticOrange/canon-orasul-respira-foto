@@ -10,14 +10,18 @@
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">
 		<!-- Place favicon.ico in the root directory -->
 
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="/css/normalize.css">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="stylesheet" href="/css/style.css">
 	</head>
 
 	<body>
-		<div class="wrapper">
-			<div class="layer"></div>
+		<div class="wrapper <?php 
+						if($_SERVER['PHP_SELF'] == '/index.php')
+						echo 'wrapper1';
+						else echo 'wrapper2';
+			 		?>">
+			<div class="layer"></div>		
 			<div class="content">
 				<div class="header">
 					@include('partials.header')
@@ -34,11 +38,11 @@
 		</div>
 
 		<!-- Scripts -->
-		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+		<script src="/js/vendor/modernizr-2.8.3.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-		<script src="js/plugins.js"></script>
-		<script src="js/main.js"></script>
+		<script src="/js/plugins.js"></script>
+		<script src="/js/main.js"></script>
 
 		@yield('javascript')
 		
