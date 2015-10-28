@@ -1,16 +1,16 @@
  <nav>
     <ul>
         <li>
-            <a href="">Orasul respira fotografie</a>
+            <a href="">Home</a>
+        </li>
+        <li>
+            <a href="">Portofolii</a>
         </li>
         <li>
             <a href="">Inscrie-te</a>
         </li>
         <li>
-            <a href="">Galerie</a>
-        </li>
-        <li>
-            <a href="">Castigator</a>
+            <a href="">Cum functioneaza</a>
         </li>
     </ul>
 </nav>

@@ -2,8 +2,8 @@
 
 @section('content')
 	<div class="motto">
-		<p>Orasul Respira</p>
-		<p>Fotografie</p>
+		<p>Donezi o poza</p>
+		<p>implinesti un vis</p>
 	</div>
 
 	<div class="circle">
@@ -11,13 +11,10 @@
 			<img src="img/camera.png">
 		</div>
 		<div class="fiveD">
-			<p>Inscrie o poza si poti</p>
-			<p>castiga un <span>5d MarkIII</span></p>
+			<p>Inscrie-te in concurs si</p>
+            <p>poti castiga echipament</p>
+			<p><strong>Canon de 3000 &#8364;</strong></p>
 		</div>
-	</div>
-
-	<div class="rules">
-		<a href="">Regulament</a>
 	</div>
 @endsection
 

@@ -1,5 +1,10 @@
+@font-face {
+    font-family: Kalinga;
+    src: url(fonts/kalinga.ttf);
+}
+
 body{
-	font-family: Kalinga;
+	font-family: Kalinga, sans-serif;
 }
 
 *{
