@@ -13,3 +13,4 @@
 
 Route::controller('/registration', 'RegistrationController');
 Route::controller('/', 'HomeController');
+Route::controller('/upload-image', 'UploadImageController');
