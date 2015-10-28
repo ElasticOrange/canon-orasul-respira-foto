@@ -11,4 +11,5 @@
 |
 */
 
+Route::controller('/registration', 'RegistrationController');
 Route::controller('/', 'HomeController');
