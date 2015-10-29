@@ -16,13 +16,7 @@
 	</head>
 
 	<body>
-		<div class="wrapper wrapper1<?php
-            /*
-						if($_SERVER['PHP_SELF'] == '/index.php')
-						echo 'wrapper1';
-						else echo 'wrapper2';
-            */
-			 		?>">
+		<div class="wrapper {{$selectedPage==0 ? 'wrapper1' : 'wrapper2'}}">
 			<div class="layer"></div>		
 			<div class="content">
 				<div class="header">

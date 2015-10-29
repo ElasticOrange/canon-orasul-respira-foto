@@ -11,6 +11,12 @@
 |
 */
 
-Route::controller('/register', 'RegistrationController');
-Route::controller('/', 'HomeController');
+Route::group(['middleware' => 'auth'], function()
+{
+    Route::controller('/register','RegistrationController');
+
+});
+
+Route::controller('/facebook','FacebookController');
 Route::controller('/upload-image', 'UploadImageController');
+Route::controller('/', 'HomeController');

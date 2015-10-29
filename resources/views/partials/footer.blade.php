@@ -1,3 +1,5 @@
 <div class="logo">
-    <img src="/img/logo.png">
+    @if ($selectedPage==0)
+        <img src="/img/logo.png">
+    @endif
 </div>

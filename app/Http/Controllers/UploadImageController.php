@@ -37,16 +37,16 @@ class UploadImageController extends Controller
 			$constraint->aspectRatio();
 			$constraint->upsize();
 		});
-		$img->save(storage_path() .'/'. md5($image->id), 100);
+		$img->save( base_path() . '/public/images/'. md5($image->id).'.jpg', 100);
 
-		$image->path = md5($image->id);
-		$image->save();
+        $img->resize(80, 80);
+        $img->save( base_path() . '/public/images/thumb_80_'. md5($image->id).'.jpg', 100);
 
-		$request->session()->push('uploaded_images', $image->id);
+        //$request->session()->push('uploaded_images', $image->id);
 
 		return response()->json([
-				'message' => 'created'
-				, 'session' => $request->session()->get('uploaded_images')
+				'message' => 'created',
+				'path' => '/images/thumb_80_'. md5($image->id).'.jpg'
 			],
 			201
 		);
