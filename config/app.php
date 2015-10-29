@@ -146,6 +146,7 @@ return [
 		App\Providers\RouteServiceProvider::class,
 
 		Intervention\Image\ImageServiceProvider::class,
+        SammyK\LaravelFacebookSdk\LaravelFacebookSdkServiceProvider::class,
 
 	],
 
@@ -197,6 +198,7 @@ return [
 		'View'      => Illuminate\Support\Facades\View::class,
 
 		'ImageIntervention'     => Intervention\Image\Facades\Image::class,
+        'Facebook' => SammyK\LaravelFacebookSdk\FacebookFacade::class
 	],
 
 ];

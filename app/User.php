@@ -14,8 +14,13 @@ class User extends Model implements AuthenticatableContract,
                                     AuthorizableContract,
                                     CanResetPasswordContract
 {
-    use Authenticatable, Authorizable, CanResetPassword;
+    use Authenticatable, Authorizable, CanResetPassword, \SammyK\LaravelFacebookSdk\SyncableGraphNodeTrait;
 
+    protected static $graph_node_field_aliases = [
+        'id' => 'facebook_user_id',
+        'picture.is_silhouette' => 'is_silhouette',
+        'picture.url' => 'url',
+    ];
     /**
      * The database table used by the model.
      *

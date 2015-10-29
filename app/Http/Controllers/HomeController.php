@@ -15,6 +15,7 @@ class HomeController extends Controller
 	 */
 	public function getIndex()
 	{
-		return view('home.index');
+        $data = array('selectedPage' => 0);
+		return view('home.index',$data);
 	}
 }
