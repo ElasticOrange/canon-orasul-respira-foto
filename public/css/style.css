@@ -58,12 +58,38 @@ p{
 }
 
 /*Register*/
-.register-teaser{
+.wide-thumbnail{
+    width: 180px; height: 135px; position: relative; text-align: center; line-height: 135px; float: left; margin: 15px;
+}
+
+.gallery-zoom{
+    width: 100%; height: 100%; display: none; background-color:rgba(208, 0, 0, 0.3); position: absolute; top:0; left:0;
+}
+
+.vote-gallery{
+    width: 132px;
+    height: 99px;
+    line-height: 99px;
+    margin: 2px;
+}
+.wide-thumbnail:hover .gallery-zoom{
+   display: block;
+}
+
+.vote-overlay{
+    width: 100%; height: 100%; background-color:rgba(208, 0, 0, 0.3); position: absolute; top:0; left:0; display: none;
+}
+
+.container-dotted-border:hover .vote-overlay{
+    display: block;
+}
+
+.big-text{
     font-size: 43px;
     text-align: center;
     padding-top: 10px;
 }
-.register-text{
+.normal-text{
     font-size: 16px;
     text-align: center;
     padding-top: 20px;
@@ -72,6 +98,14 @@ p{
 .register-add-photo{
     margin-left: 15px;
     margin-right: 15px;
+    position: relative;
+}
+
+.register-remove-photo{
+    z-index: 9999;
+    position: absolute;
+    top: -37px;
+    right: -7px;
 }
 
 .register-description {
@@ -80,9 +114,8 @@ p{
     margin-left: auto;
     margin-right: auto;
     border: none;
-    background-color: #000000;
+    background-color: rgba(0,0,0,0.2);
     color: #ffffff;
-    opacity: 0.5;
     padding: 5px;
     font-family: Kalinga, sans-serif;
 }
@@ -112,13 +145,62 @@ p{
     font-family: Kalinga, sans-serif;
 }
 
+.container-dotted-border{
+    width: 700px;
+    display: block;
+    background-color: rgba(0,0,0,0.2);
+    border: 1px dashed #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 75px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.user-red-circle{
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 55px;
+    left: 295px;
+    top: -55px;
+    display: block;
+    background-color: #d00000
+}
+
+.user-photo{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top:-50px;
+    left: 300px;
+    border-radius: 50px;
+}
+
 .red-button{
     background-color: #d00000;
     border-radius: 3px;
     text-decoration: none;
-    border: 1px solid #ffffff;
-    padding: 10px;
+    padding: 5px;
     cursor: pointer;
+}
+
+.white-button{
+    background-color: #ffffff;
+    color: #cf2026;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-top: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.red-button-border{
+    border: 1px solid #ffffff;
 }
 
 /*Header*/

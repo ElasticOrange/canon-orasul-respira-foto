@@ -3,16 +3,31 @@
 @section('content')
 
 <div class="content-wrapper">
-    <p class="register-teaser">Inscrie-te in concurs si poti castiga echipament Canon in valoare de<br> <strong>3000 &#8364;</strong></p>
-    <p class="register-text">Lorem ipsum dolor sit amet, ne ridens ornatus reprimique vix, ius errem laudem accommodare ne, eum et soleat libris. Mea dolorum abhorreant necessitatibus id. Tale viderer eripuit nam at. An quot iusto qui. Mel rebum altera reprimique eu, nibh viderer sea ad, an vix case integre prompta.</p>
-    <p class="register-text">Urca maxim 5 fotografii in portofoliul tau</p>
+    <p class="big-text">Inscrie-te in concurs si poti castiga echipament Canon in valoare de<br> <strong>3000 &#8364;</strong></p>
+    <p class="normal-text">Lorem ipsum dolor sit amet, ne ridens ornatus reprimique vix, ius errem laudem accommodare ne, eum et soleat libris. Mea dolorum abhorreant necessitatibus id. Tale viderer eripuit nam at. An quot iusto qui. Mel rebum altera reprimique eu, nibh viderer sea ad, an vix case integre prompta.</p>
+    <p class="normal-text">Urca maxim 5 fotografii in portofoliul tau</p>
 
     <div style="text-align: center; padding-top: 20px; padding-bottom: 20px;">
-        <a class="register-add-photo" data-field-id="1"> <img src="img/add_photo.png" id="photo1"> </a>
-        <a class="register-add-photo" data-field-id="2"> <img src="img/add_photo.png" id="photo2"> </a>
-        <a class="register-add-photo" data-field-id="3"> <img src="img/add_photo.png" id="photo3"> </a>
-        <a class="register-add-photo" data-field-id="4"> <img src="img/add_photo.png" id="photo4"> </a>
-        <a class="register-add-photo" data-field-id="5"> <img src="img/add_photo.png" id="photo5"> </a>
+        <a class="register-add-photo" data-field-id="1">
+            <img src="/img/add_photo.png" id="photo1">
+            <img src="/img/remove_photo.png" data-field-id="1" id="remove1" class="register-remove-photo" style="display: none" />
+        </a>
+        <a class="register-add-photo" data-field-id="2">
+            <img src="/img/add_photo.png" id="photo2">
+            <img src="/img/remove_photo.png" data-field-id="2" id="remove2" class="register-remove-photo" style="display: none" />
+        </a>
+        <a class="register-add-photo" data-field-id="3">
+            <img src="/img/add_photo.png" id="photo3">
+            <img src="/img/remove_photo.png" data-field-id="3" id="remove3" class="register-remove-photo" style="display: none" />
+        </a>
+        <a class="register-add-photo" data-field-id="4">
+            <img src="/img/add_photo.png" id="photo4">
+            <img src="/img/remove_photo.png" data-field-id="4" id="remove4" class="register-remove-photo" style="display: none" />
+        </a>
+        <a class="register-add-photo" data-field-id="5">
+            <img src="/img/add_photo.png" id="photo5">
+            <img src="/img/remove_photo.png" data-field-id="5" id="remove5" class="register-remove-photo" style="display: none" />
+        </a>
     </div>
 
     <div style="display: none;">
@@ -38,16 +53,18 @@
         </form>
     </div>
 
-    <p class="register-text">Spune povestea ta</p>
-    <div class="register-description register-description-border">
-        <textarea class="register-description"></textarea>
-    </div>
+    <form action="/register/save-info" method="post" id="form-info">
+        <p class="normal-text">Spune povestea ta</p>
+        <div class="register-description register-description-border">
+            <textarea class="register-description" name="description"></textarea>
+        </div>
 
-    <p class="register-text">Lasa-ne numarul tau de telefon</p>
-    <input type="text" class="register-phone">
-    <div style="margin-top: 80px; margin-bottom: 150px; width: 100%; text-align: center;">
-        <a class="red-button"> Vezi cum arata profilul tau</a>
-    </div>
+        <p class="normal-text">Lasa-ne numarul tau de telefon</p>
+        <input type="text" class="register-phone" name="phone" >
+        <div style="margin-top: 80px; margin-bottom: 150px; width: 100%; text-align: center;">
+            <a class="red-button red-button-border" id="submitExtraInfo"> Vezi cum arata profilul tau</a>
+        </div>
+    </form>
 </div>
 
 @endsection
@@ -55,11 +72,25 @@
 @section('javascript')
     <script type="text/javascript">
 
-
         $(document).ready(function()
         {
             $(".register-add-photo").click(function(e){
                 $("#file"+$(this).attr("data-field-id")).trigger("click");
+            });
+
+            $("#submitExtraInfo").click(function(e){
+                $("#form-info").submit();
+            });
+
+            $(".register-remove-photo").click(function(e){
+
+                $.post( "/upload-image/remove", { imageId: $(this).attr("data-field-id") }, function( data ) {
+                    if(data.message=="removed"){
+                        $("#remove"+data.imageId).hide();
+                        $("#photo"+data.imageId).attr("src",'img/add_photo.png');
+                    }
+                }, "json");
+                return false;
             });
 
             $('.file-upload').on( "change", function(){ upload( $(this).attr('data-field-id') ); } );
@@ -76,7 +107,8 @@
                     contentType: false   // tell jQuery not to set contentType
                 }).done(function( data ) {
                     if (data.message == 'created'){
-                        $("#photo1").attr("src",data.path);
+                        $("#photo"+data.imageId).attr("src",data.path);
+                        $("#remove"+data.imageId).show();
                     }
 
                 });

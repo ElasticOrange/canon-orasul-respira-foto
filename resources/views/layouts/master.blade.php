@@ -13,9 +13,13 @@
 		<link rel="stylesheet" href="/css/normalize.css">
 		<link rel="stylesheet" href="/css/main.css">
 		<link rel="stylesheet" href="/css/style.css">
+
+        @yield('css')
 	</head>
 
-	<body>
+	<body >
+        <div style="position: fixed; width: 100%; height: 100%; top:0; left: 0; background: rgba(0,0,0,0.6); z-index: 9998; display: none;" id="overlay"></div>
+
 		<div class="wrapper {{$selectedPage==0 ? 'wrapper1' : 'wrapper2'}}">
 			<div class="layer"></div>		
 			<div class="content">

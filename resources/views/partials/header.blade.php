@@ -4,7 +4,7 @@
             <a href="/">Home</a>
         </li>
         <li class="{{$selectedPage==1 ? 'active' : ''}}">
-            <a href="">Portofolii</a>
+            <a href="/profile/clasament">Portofolii</a>
         </li>
         <li class="{{$selectedPage==2 ? 'active' : ''}}">
             <a href="/register">Inscrie-te</a>
