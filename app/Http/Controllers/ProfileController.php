@@ -25,9 +25,16 @@ class ProfileController extends Controller
 
             $vote = Vote::where(['user_id' => Auth::id(), 'profile_id' => $profileId])->first();
             $voted = false;
-            if (!$vote || $vote->isActive==1){
+            if ($vote && $vote->isActive==1){
                 $voted = true;
             }
+
+            $photos = [];
+            if ($profile->photo1!="") $photos[]=$profile->photo1;
+            if ($profile->photo2!="") $photos[]=$profile->photo2;
+            if ($profile->photo3!="") $photos[]=$profile->photo3;
+            if ($profile->photo4!="") $photos[]=$profile->photo4;
+            if ($profile->photo5!="") $photos[]=$profile->photo5;
 
             $fb = App::make('SammyK\LaravelFacebookSdk\LaravelFacebookSdk');
 
@@ -38,7 +45,8 @@ class ProfileController extends Controller
                 'user' => $user,
                 'fbLink' => $fb->getLoginUrl(['email']),
                 'votes' => $profile->votes()->where('isActive', '1')->get(),
-                'voted' => $voted
+                'voted' => $voted,
+                'photos' => $photos
             );
             return view('profile.index',$data);
         }
@@ -50,14 +58,13 @@ class ProfileController extends Controller
     public function getClasament()
     {
 
-        $votes = Vote::select(DB::raw('votes.*, count(*) as `voteCount`'))
-            ->groupBy('profile_id')
+        $profiles = Profile::select(DB::raw('*,(select count(*) from votes where profile_id=profiles.id and isActive=1) as voteCount'))
             ->orderBy('voteCount', 'desc')
             ->get();
 
         $data = array(
             'selectedPage' => 1,
-            'votes' => $votes
+            'profiles' => $profiles
         );
         return view('profile.clasament',$data);
     }

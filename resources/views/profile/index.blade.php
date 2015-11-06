@@ -25,7 +25,7 @@
         </div>
         </p>
         <div style="margin-top: 30px; margin-bottom: 30px; width: 100%; text-align: center;">
-            <a class="white-button" href="/portofolii"> Portofolii </a>
+            <a class="white-button" href="/profile/clasament"> Portofolii </a>
         </div>
     </div>
 
@@ -33,7 +33,7 @@
         <img src="/img/loader.gif">
     </div>
 
-    <div class="container-dotted-border">
+    <div class="container-dotted-border" id="contentContainer">
         <div class="user-red-circle"></div>
         <img class="user-photo" src="/images/profilePhotos/thumb_100_{{md5($user->id)}}.jpg" >
 
@@ -49,58 +49,34 @@
         <p class="normal-text">Imagini portofoliu</p>
 
         <div style="text-align: center;">
-            <div class="wide-thumbnail" style="margin-left: 50px">
-                <a href="{{generatePhotoURL('full',$profile->photo1)}}" data-lightbox="portofoliu" id="photo1">
-                    <img src="{{generatePhotoURL('thumb_180',$profile->photo1)}}">
-                </a>
+            @for ($i = 0; $i < 3; $i++)
+                @if (isset($photos[$i]))
+                    <div class="wide-thumbnail photoRow1">
+                        <a href="{{generatePhotoURL('full',$photos[$i])}}" data-lightbox="portofoliu" id="photo{{$i}}">
+                            <img src="{{generatePhotoURL('thumb_180',$photos[$i])}}">
+                        </a>
 
-                <a class="gallery-zoom" data-photo='photo1'>
-                    <img src="/img/search.png">
-                </a>
-            </div>
-
-            <div class="wide-thumbnail">
-                <a href="{{generatePhotoURL('full',$profile->photo2)}}" data-lightbox="portofoliu" id="photo2">
-                    <img src="{{generatePhotoURL('thumb_180',$profile->photo2)}}">
-                </a>
-
-                <a class="gallery-zoom" data-photo='photo2'>
-                    <img src="/img/search.png">
-                </a>
-            </div>
-
-            <div class="wide-thumbnail">
-                <a href="{{generatePhotoURL('full',$profile->photo3)}}" data-lightbox="portofoliu" id="photo3">
-                    <img src="{{generatePhotoURL('thumb_180',$profile->photo3)}}">
-                </a>
-
-                <a class="gallery-zoom" data-photo='photo3'>
-                    <img src="/img/search.png">
-                </a>
-            </div>
-
+                        <a class="gallery-zoom" data-photo='photo{{$i}}'>
+                            <img src="/img/search.png">
+                        </a>
+                    </div>
+                @endif
+            @endfor
             <div class="clearfix"></div>
 
-            <div class="wide-thumbnail" style="margin-left: 170px;">
-                <a href="{{generatePhotoURL('full',$profile->photo4)}}" data-lightbox="portofoliu" id="photo4">
-                    <img src="{{generatePhotoURL('thumb_180',$profile->photo4)}}">
-                </a>
+            @for ($i = 3; $i < 5; $i++)
+                @if (isset($photos[$i]))
+                <div class="wide-thumbnail photoRow2">
+                    <a href="{{generatePhotoURL('full',$photos[$i])}}" data-lightbox="portofoliu" id="photo{{$i}}">
+                        <img src="{{generatePhotoURL('thumb_180',$photos[$i])}}">
+                    </a>
 
-                <a class="gallery-zoom" data-photo='photo4'>
-                    <img src="/img/search.png">
-                </a>
-            </div>
-
-            <div class="wide-thumbnail">
-                <a href="{{generatePhotoURL('full',$profile->photo5)}}" data-lightbox="portofoliu" id="photo5">
-                    <img src="{{generatePhotoURL('thumb_180',$profile->photo5)}}">
-                </a>
-
-                <a class="gallery-zoom" data-photo='photo5'>
-                    <img src="/img/search.png">
-                </a>
-            </div>
-
+                    <a class="gallery-zoom" data-photo='photo{{$i}}'>
+                        <img src="/img/search.png">
+                    </a>
+                </div>
+                @endif
+            @endfor
             <div class="clearfix"></div>
 
         </div>
@@ -131,7 +107,7 @@
                         <a class="red-button red-button-border" id="vote"> Doneaza</a>
                     </div>
                 @else
-                    <div style="margin-top: 12px; margin-bottom: 150px; width: 100%; text-align: center;">
+                    <div style="margin-top: 12px; margin-bottom: 30px; margin-top: 30px; width: 100%; text-align: center;">
                         <a class="red-button red-button-border" style="line-height: 30px;" href="{{$fbLink}}"><img src="/img/fb-logo.png" height="30px"> Login with Facebook </a>
                     </div>
                 @endif
@@ -185,6 +161,10 @@
 
     $(document).ready(function()
     {
+        console.log($("#contentContainer").width());
+        console.log($(".photoRow1").length);
+        $(".photoRow1").first().css("margin-left",($("#contentContainer").width()-$(".photoRow1").length*210)/2+15);
+        $(".photoRow2").first().css("margin-left",($("#contentContainer").width()-$(".photoRow2").length*210)/2+15);
         lightbox.option({
             'resizeDuration': 200,
             'wrapAround': true

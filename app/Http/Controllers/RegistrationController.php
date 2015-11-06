@@ -16,7 +16,7 @@ class RegistrationController extends Controller
     public function getIndex()
     {
         $profile = Profile::where("user_id","=",Auth::id())->first();
-        if ($profile->isActive==1){
+        if ($profile && $profile->isActive==1){
             return redirect('/profile/index/'.$profile->id);
         }
 
