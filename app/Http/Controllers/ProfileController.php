@@ -33,7 +33,7 @@ class ProfileController extends Controller
 
             $user = User::where("id","=",$profile->user_id)->first();
             $data = array(
-                'selectedPage' => 2,
+                'selectedPage' => -1,
                 'profile' => $profile,
                 'user' => $user,
                 'fbLink' => $fb->getLoginUrl(['email']),

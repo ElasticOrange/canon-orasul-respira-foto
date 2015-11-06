@@ -110,32 +110,34 @@
             pentru a-i indeplini visul, doneaza o fotografie aici
         </p>
 
-        @if (!$voted)
-            @if (Auth::user())
-                <div style="text-align: center; padding-top: 20px; padding-bottom: 20px;">
-                    <a class="register-add-photo" data-field-id="1">
-                        <img src="/img/add_photo.png" id="photoVote">
-                        <img src="/img/remove_photo.png" data-field-id="1" id="removePhotoVote" class="register-remove-photo" style="display: none; z-index: 1000" />
-                    </a>
-                </div>
+        @if ($user->id != Auth::id())
+            @if (!$voted)
+                @if (Auth::user())
+                    <div style="text-align: center; padding-top: 20px; padding-bottom: 20px;">
+                        <a class="register-add-photo" data-field-id="1">
+                            <img src="/img/add_photo.png" id="photoVote">
+                            <img src="/img/remove_photo.png" data-field-id="1" id="removePhotoVote" class="register-remove-photo" style="display: none; z-index: 1000" />
+                        </a>
+                    </div>
 
-                <div style="display: none;">
-                    <form id="upload-form-1">
-                        <input type="file" id="file1" class="file-upload" data-field-id="1" name='image'>
-                        <input type="hidden" name="profileId" value="{{$profile->id}}">
-                    </form>
-                </div>
+                    <div style="display: none;">
+                        <form id="upload-form-1">
+                            <input type="file" id="file1" class="file-upload" data-field-id="1" name='image'>
+                            <input type="hidden" name="profileId" value="{{$profile->id}}">
+                        </form>
+                    </div>
 
-                <div style="margin-top: 12px; margin-bottom: 30px; width: 100%; text-align: center;">
-                    <a class="red-button red-button-border" id="vote"> Doneaza</a>
-                </div>
+                    <div style="margin-top: 12px; margin-bottom: 30px; width: 100%; text-align: center;">
+                        <a class="red-button red-button-border" id="vote"> Doneaza</a>
+                    </div>
+                @else
+                    <div style="margin-top: 12px; margin-bottom: 150px; width: 100%; text-align: center;">
+                        <a class="red-button red-button-border" style="line-height: 30px;" href="{{$fbLink}}"><img src="/img/fb-logo.png" height="30px"> Login with Facebook </a>
+                    </div>
+                @endif
             @else
-                <div style="margin-top: 12px; margin-bottom: 150px; width: 100%; text-align: center;">
-                    <a class="red-button red-button-border" style="line-height: 30px;" href="{{$fbLink}}"><img src="/img/fb-logo.png" height="30px"> Login with Facebook </a>
-                </div>
+                <p class="normal-text" style="margin-top: 30px; margin-bottom: 30px;">{{$user->name}} iti multumeste pentru votul tau!</p>
             @endif
-        @else
-            <p class="normal-text" style="margin-top: 30px; margin-bottom: 30px;">Donatii stranse {{count($votes)}}</p>
         @endif
 
         <p class="normal-text" style="margin-top: 30px; margin-bottom: 30px;">Donatii stranse {{count($votes)}}</p>
