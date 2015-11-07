@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Input;
 use Auth;
 use App\Http\Controllers\Controller;
 use App\Profile;
+use Illuminate\Support\Facades\URL;
 
 class RegistrationController extends Controller
 {
@@ -75,7 +76,9 @@ class RegistrationController extends Controller
         $data = array(
             'selectedPage' => 2,
             'profile' => Profile::where("user_id","=",Auth::id())->first(),
-            'user' => Auth::user()
+            'user' => Auth::user(),
+            'redirectUrl' => shortenUrl( URL::to('/profile/index/'.$profile->id) ),
+            'pageUrl' => URL::to('/profile/index/'.$profile->id)
         );
         return view('register.preview',$data);
     }    

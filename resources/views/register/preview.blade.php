@@ -21,7 +21,7 @@
         <p class="normal-text">
             Sau distribuie linkul:
             <div style="margin-top: 30px; margin-bottom: 30px; width: 100%; text-align: center;">
-                <span style="color: #ffffff; border: 1px dashed #ffffff; padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px;" >http://www.lorem.example.test/123/45/01.html</span>
+                <span style="color: #ffffff; border: 1px dashed #ffffff; padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px;" >{{$redirectUrl}}</span>
             </div>
         </p>
         <div style="margin-top: 30px; margin-bottom: 30px; width: 100%; text-align: center;">
@@ -209,16 +209,11 @@
 
             $("#shareOnFacebook").click(function(e){
                 e.preventDefault();
-                FB.ui({
-                    method: 'share_open_graph',
-                    action_type: 'og.likes',
-                    action_properties: JSON.stringify({
-                        object:'https://developers.facebook.com/docs/'
-                    })
-                }, function(response){
-                    // Debug response (optional)
-                    console.log(response);
-                });
+                FB.ui(
+                    {
+                        method: 'share',
+                        href: '{{$pageUrl}}'
+                    }, function(response){ console.log(response); });
             });
         });
     </script>

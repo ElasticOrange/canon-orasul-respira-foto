@@ -4,6 +4,16 @@
 <link rel="stylesheet" href="/css/lightbox/css/lightbox.css">
 @endsection
 
+@section('fbTags')
+<meta property="og:title" content="{{$user->name}}" />
+<meta property="og:site_name" content="Canon Pay with Photo"/>
+<meta property="og:url" content="{{URL::to('/profile/index/'.$profile->id)}}" />
+<meta property="og:description" content="{{$profile->description}}" />
+<meta property="fb:app_id" content="1059827974029585" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="{{URL::to(generatePhotoURL('full',$photos[0]))}}" />
+@endsection
+
 @section('content')
 
 <div class="content-wrapper" style="position: relative;">
@@ -21,7 +31,7 @@
         <p class="normal-text">
             Sau distribuie linkul:
         <div style="margin-top: 30px; margin-bottom: 30px; width: 100%; text-align: center;">
-            <span style="color: #ffffff; border: 1px dashed #ffffff; padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px;" >http://www.lorem.example.test/123/45/01.html</span>
+            <span style="color: #ffffff; border: 1px dashed #ffffff; padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px;" >{{$redirectUrl}}</span>
         </div>
         </p>
         <div style="margin-top: 30px; margin-bottom: 30px; width: 100%; text-align: center;">
@@ -44,7 +54,7 @@
 
         <p class="normal-text" style="margin-top: 30px;">Despre mine</p>
 
-        <p class="normal-text" id="user-description" style="padding: 10px;" t>{{$profile->description}}</p>
+        <p class="normal-text" id="user-description" style="padding: 10px;">{{$profile->description}}</p>
 
         <p class="normal-text">Imagini portofoliu</p>
 
@@ -240,7 +250,7 @@
                 method: 'share_open_graph',
                 action_type: 'og.likes',
                 action_properties: JSON.stringify({
-                    object:'https://developers.facebook.com/docs/'
+                    object:'{{$pageUrl}}'
                 })
             }, function(response){
                 // Debug response (optional)

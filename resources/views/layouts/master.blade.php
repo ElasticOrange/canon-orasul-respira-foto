@@ -15,6 +15,8 @@
 		<link rel="stylesheet" href="/css/style.css">
 
         @yield('css')
+
+        @yield('fbTags')
 	</head>
 
 	<body >

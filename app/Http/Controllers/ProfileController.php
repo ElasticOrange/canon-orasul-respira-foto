@@ -11,11 +11,10 @@ use App\User;
 use App\Vote;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\URL;
 
 class ProfileController extends Controller
 {
-    //
-
     public function getIndex($profileId)
     {
         $profile = Profile::where("id","=",$profileId)->first();
@@ -46,7 +45,9 @@ class ProfileController extends Controller
                 'fbLink' => $fb->getLoginUrl(['email']),
                 'votes' => $profile->votes()->where('isActive', '1')->get(),
                 'voted' => $voted,
-                'photos' => $photos
+                'photos' => $photos,
+                'redirectUrl' => shortenUrl( URL::to('/profile/index/'.$profile->id) ),
+                'pageUrl' => URL::to('/profile/index/'.$profile->id)
             );
             return view('profile.index',$data);
         }
