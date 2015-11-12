@@ -62,16 +62,17 @@ p{
     width: 180px; height: 135px; position: relative; text-align: center; line-height: 135px; float: left; margin: 15px;
 }
 
-.gallery-zoom{
-    width: 100%; height: 100%; display: none; background-color:rgba(208, 0, 0, 0.3); position: absolute; top:0; left:0;
-}
-
 .vote-gallery{
     width: 132px;
     height: 99px;
     line-height: 99px;
     margin: 2px;
 }
+
+.gallery-zoom{
+    width: 100%; height: 100%; display: none; background-color:rgba(208, 0, 0, 0.3); position: absolute; top:0; left:0; margin: 0px;
+}
+
 .wide-thumbnail:hover .gallery-zoom{
    display: block;
 }
@@ -82,6 +83,14 @@ p{
 
 .container-dotted-border:hover .vote-overlay{
     display: block;
+}
+
+.photo-border{
+    border: 1px dashed #ffffff;
+    padding: 0px;
+    width: 78px;
+    height: 78px;
+    border-radius: 4px;
 }
 
 .big-text{
@@ -99,6 +108,7 @@ p{
     margin-left: 15px;
     margin-right: 15px;
     position: relative;
+    cursor: pointer;
 }
 
 .register-remove-photo{
@@ -106,6 +116,7 @@ p{
     position: absolute;
     top: -37px;
     right: -7px;
+    cursor: pointer;
 }
 
 .register-description {

@@ -25,7 +25,7 @@
             <strong>O poza primita = o sansa in plus ca el sa castige</strong>
         </p>
         <div style="margin-top: 30px; margin-bottom: 10px; width: 100%; text-align: center;">
-            <a class="white-button" id="shareOnFacebook"> Share on facebook</a>
+            <a class="white-button shareOnFacebook"> Share on facebook</a>
         </div>
         </p>
         <p class="normal-text">
@@ -113,6 +113,8 @@
                         </form>
                     </div>
 
+                    <p class="normal-text red-button" style="margin-top: 10px; margin-bottom: 10px; width: 660px; margin-left: auto; margin-right: auto; display: none;" id="voteFeedback"></p>
+                    <div class="clearfix"></div>
                     <div style="margin-top: 12px; margin-bottom: 30px; width: 100%; text-align: center;">
                         <a class="red-button red-button-border" id="vote"> Doneaza</a>
                     </div>
@@ -123,8 +125,18 @@
                 @endif
             @else
                 <p class="normal-text" style="margin-top: 30px; margin-bottom: 30px;">{{$user->name}} iti multumeste pentru votul tau!</p>
+
+                <div style="margin-top: 30px; margin-bottom: 10px; width: 100%; text-align: center;">
+                    <a class="white-button shareOnFacebook"> Share on facebook</a>
+                </div>
             @endif
+        @else
+            <div style="margin-top: 30px; margin-bottom: 10px; width: 100%; text-align: center;">
+                <a class="white-button shareOnFacebook"> Share on facebook</a>
+            </div>
         @endif
+
+
 
         <p class="normal-text" style="margin-top: 30px; margin-bottom: 30px;">Donatii stranse {{count($votes)}}</p>
 
@@ -135,7 +147,7 @@
                     <img src="{{generatePhotoURL('thumb_132', $vote->photo, true)}}">
                 </a>
 
-                <a class="gallery-zoom vote-gallery" data-photo='vote{{$vote->id}}'>
+                <a class="vote-gallery gallery-zoom" data-photo='vote{{$vote->id}}'>
                     <strong>{{$vote->user->name}}</strong>
                 </a>
             </div>
@@ -171,8 +183,8 @@
 
     $(document).ready(function()
     {
-        console.log($("#contentContainer").width());
-        console.log($(".photoRow1").length);
+        var addedPhoto=false;
+
         $(".photoRow1").first().css("margin-left",($("#contentContainer").width()-$(".photoRow1").length*210)/2+15);
         $(".photoRow2").first().css("margin-left",($("#contentContainer").width()-$(".photoRow2").length*210)/2+15);
         lightbox.option({
@@ -194,7 +206,8 @@
             $.post( "/upload-image/remove-vote", { profileId: "{{$profile->id}}" }, function( data ) {
                 if(data.message=="removed"){
                     $("#removePhotoVote").hide();
-                    $("#photoVote").attr("src",'/img/add_photo.png');
+                    $("#photoVote").attr("src",'/img/add_photo.png').removeClass("photo-border");
+                    addedPhoto=false;
                 }
             }, "json");
             return false;
@@ -214,8 +227,10 @@
                 contentType: false   // tell jQuery not to set contentType
             }).done(function( data ) {
                     if (data.message == 'created'){
-                        $("#photoVote").attr("src",data.path);
+                        addedPhoto=true;
+                        $("#photoVote").attr("src",data.path).addClass("photo-border");
                         $("#removePhotoVote").show();
+                        $("#voteFeedback").html("").hide();
                     }
 
                 });
@@ -223,7 +238,13 @@
         }
 
         $("#vote").click(function(e){
-            showModal();
+            if ( addedPhoto ){
+                showModal();
+            }
+            else{
+                $("#voteFeedback").html("Pentru a vota trebuie sa urci o fotografie").show();
+            }
+
         });
 
         function showModal(){
@@ -244,7 +265,7 @@
             return false;
         }
 
-        $("#shareOnFacebook").click(function(e){
+        $(".shareOnFacebook").click(function(e){
             e.preventDefault();
             FB.ui({
                 method: 'share_open_graph',

@@ -56,11 +56,15 @@
     <form action="/register/save-info" method="post" id="form-info">
         <p class="normal-text">Spune povestea ta</p>
         <div class="register-description register-description-border">
-            <textarea class="register-description" name="description"></textarea>
+            <textarea class="register-description" name="description" id="description"></textarea>
         </div>
 
         <p class="normal-text">Lasa-ne numarul tau de telefon</p>
-        <input type="text" class="register-phone" name="phone" >
+        <input type="text" class="register-phone" name="phone" id="phone">
+
+        <p class="normal-text red-button" style="margin-top: 10px; margin-bottom: 10px; width: 660px; margin-left: auto; margin-right: auto; display: none;" id="registerFeedback"></p>
+        <div class="clearfix"></div>
+
         <div style="margin-top: 80px; margin-bottom: 150px; width: 100%; text-align: center;">
             <a class="red-button red-button-border" id="submitExtraInfo"> Vezi cum arata profilul tau</a>
         </div>
@@ -71,6 +75,7 @@
 
 @section('javascript')
     <script type="text/javascript">
+        var uploadCount=0;
 
         $(document).ready(function()
         {
@@ -79,15 +84,28 @@
             });
 
             $("#submitExtraInfo").click(function(e){
+                if (uploadCount <= 0){
+                    $("#registerFeedback").html("Trebuie sa urci minim o fotografie").show();
+                    return false;
+                }
+                if ($("#description").val()==""){
+                    $("#registerFeedback").html("Trebuie sa ne spui povestea ta").show();
+                    return false;
+                }
+                if ($("#phone").val()==""){
+                    $("#registerFeedback").html("Trebuie sa ne lasi numarul de telefon pentru a  te contacta").show();
+                    return false;
+                }
+
                 $("#form-info").submit();
             });
 
             $(".register-remove-photo").click(function(e){
-
                 $.post( "/upload-image/remove", { imageId: $(this).attr("data-field-id") }, function( data ) {
                     if(data.message=="removed"){
                         $("#remove"+data.imageId).hide();
-                        $("#photo"+data.imageId).attr("src",'img/add_photo.png');
+                        $("#photo"+data.imageId).attr("src",'img/add_photo.png').removeClass("photo-border");
+                        uploadCount--;
                     }
                 }, "json");
                 return false;
@@ -107,8 +125,9 @@
                     contentType: false   // tell jQuery not to set contentType
                 }).done(function( data ) {
                     if (data.message == 'created'){
-                        $("#photo"+data.imageId).attr("src",data.path);
+                        $("#photo"+data.imageId).attr("src",data.path).addClass("photo-border");
                         $("#remove"+data.imageId).show();
+                        uploadCount++;
                     }
 
                 });
