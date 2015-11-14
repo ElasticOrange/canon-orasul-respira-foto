@@ -56,6 +56,33 @@
 			e.src='https://www.google-analytics.com/analytics.js';
 			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
 			ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+
+            $(document).ready(function()
+            {
+                var mainWrapper = $(".wrapper").first();
+                var mainLayer = $(".layer").first();
+                var mainContent = $(".content").first();
+
+                mainWrapper.width($(window).width());
+                mainWrapper.height($(window).height());
+
+                mainContent.width($(window).width());
+                mainContent.height($(window).height());
+
+                mainLayer.width($(window).width());
+                mainLayer.height($(window).height());
+
+                $(window).resize(function(){
+                    mainWrapper.width($(window).width());
+                    mainWrapper.height($(window).height());
+
+                    mainContent.width($(window).width());
+                    mainContent.height($(window).height());
+
+                    mainLayer.width($(window).width());
+                    mainLayer.height($(window).height());
+                })
+            })
 		</script>
 		<!-- /Scripts -->
 

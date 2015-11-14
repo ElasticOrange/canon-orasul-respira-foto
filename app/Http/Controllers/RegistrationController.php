@@ -73,12 +73,20 @@ class RegistrationController extends Controller
             return redirect('/profile/index/'.$profile->id);
         }
 
+        $photos = [];
+        if ($profile->photo1!="") $photos[]=$profile->photo1;
+        if ($profile->photo2!="") $photos[]=$profile->photo2;
+        if ($profile->photo3!="") $photos[]=$profile->photo3;
+        if ($profile->photo4!="") $photos[]=$profile->photo4;
+        if ($profile->photo5!="") $photos[]=$profile->photo5;
+
         $data = array(
             'selectedPage' => 2,
             'profile' => Profile::where("user_id","=",Auth::id())->first(),
             'user' => Auth::user(),
             'redirectUrl' => shortenUrl( URL::to('/profile/index/'.$profile->id) ),
-            'pageUrl' => URL::to('/profile/index/'.$profile->id)
+            'pageUrl' => URL::to('/profile/index/'.$profile->id),
+            'photos' => $photos
         );
         return view('register.preview',$data);
     }    
