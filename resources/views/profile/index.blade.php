@@ -20,9 +20,9 @@
     <div style="position: fixed; width: 700px; height: 500px; background-color: #cf2026; z-index: 9999; border: 1px dashed #ffffff; border-radius: 5px; display: none" id="infoModal">
         <p class="big-text" style="padding-top: 50px;">Ai donat o fotografie</p>
         <p class="normal-text" style="margin-top: 10px;">
-            Fotograful tau preferat este acum mai aproape de echipamentul dorit <br>
-            Aduna mai multe poze pentru el si ajuta-l sa castige<br><br>
-            <strong>O poza primita = o sansa in plus ca el sa castige</strong>
+            Fotografia ta a fost încărcată!<br>
+            Datorită ție, prietenul tău este mai aproape de a câstiga echipamentul visat.
+            <br>Convinge-ți și alți prieteni să îl susțină!
         </p>
         <div style="margin-top: 30px; margin-bottom: 10px; width: 100%; text-align: center;">
             <a class="white-button shareOnFacebook"> Share on facebook</a>
@@ -43,6 +43,8 @@
         <img src="/img/loader.gif">
     </div>
 
+    <div class="headline">Încarcă o fotografie pentru prietenul tău și ajută-l să câștige echipamentul pe care și-l dorește! </div>
+
     <div class="container-dotted-border" id="contentContainer">
         <div class="user-red-circle"></div>
         <img class="user-photo" src="/images/profilePhotos/thumb_100_{{md5($user->id)}}.jpg" >
@@ -50,13 +52,16 @@
 
         <p class="big-text" style="padding-top: 75px;">{{$user->name}}</p>
 
-        <a class="red-button">Donatii stranse {{count($votes)}}</a>
+        <div class="clearfix"></div>
+        <div style="margin-top: 10px;">
+            <a class="red-button">Fotografii din partea prietenilor  {{count($votes)}}</a>
+        </div>
 
         <p class="normal-text" style="margin-top: 30px;">Despre mine</p>
 
         <p class="normal-text" id="user-description" style="padding: 10px;">{{$profile->description}}</p>
 
-        <p class="normal-text">Imagini portofoliu</p>
+        <p class="normal-text">Fotografiile mele</p>
 
         <div style="text-align: center;">
             @for ($i = 0; $i < 3; $i++)
@@ -91,14 +96,13 @@
 
         </div>
 
-        <p class="big-text" style="font-size: 25px;">
-            O fotografie urcata de tine reprezinta o sansa in plus
-            pentru a-i indeplini visul, doneaza o fotografie aici
-        </p>
-
         @if ($user->id != Auth::id())
             @if (!$voted)
                 @if (Auth::user())
+                    <p class="big-text" style="font-size: 25px;">
+                        Încarcă aici o fotografie pentru prietenul tău
+                    </p>
+
                     <div style="text-align: center; padding-top: 20px; padding-bottom: 20px;">
                         <a class="register-add-photo" data-field-id="1">
                             <img src="/img/add_photo.png" id="photoVote">
@@ -116,7 +120,7 @@
                     <p class="normal-text red-button" style="margin-top: 10px; margin-bottom: 10px; width: 660px; margin-left: auto; margin-right: auto; display: none;" id="voteFeedback"></p>
                     <div class="clearfix"></div>
                     <div style="margin-top: 12px; margin-bottom: 30px; width: 100%; text-align: center;">
-                        <a class="red-button red-button-border" id="vote"> Doneaza</a>
+                        <a class="red-button red-button-border" id="vote"> Susține-l cu o fotografie</a>
                     </div>
                 @else
                     <div style="margin-top: 12px; margin-bottom: 30px; margin-top: 30px; width: 100%; text-align: center;">
@@ -138,7 +142,7 @@
 
 
 
-        <p class="normal-text" style="margin-top: 30px; margin-bottom: 30px;">Donatii stranse {{count($votes)}}</p>
+        <p class="normal-text" style="margin-top: 30px; margin-bottom: 30px;">Galerie foto susținători ({{count($votes)}})</p>
 
         <div style="text-align: center; margin-left: 10px; margin-bottom: 10px;">
         @foreach ($votes as $vote)

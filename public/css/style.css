@@ -93,8 +93,15 @@ p{
     border-radius: 4px;
 }
 
+.headline{
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    padding-top: 10px;
+}
+
 .big-text{
-    font-size: 43px;
+    font-size: 20px;
     text-align: center;
     padding-top: 10px;
 }
@@ -365,12 +372,13 @@ p{
 	right: 0;
 	margin: auto;
 	top: 126px;
-	font-size: 42px;
+	font-size: 30px;
 	font-weight: 400;
 	text-align: center;
+    width: 740px;
 }
 .motto p{
-	line-height: initial;
+	line-height: 40px;
 }
 
 
@@ -408,7 +416,7 @@ p{
 }
 
 .fiveD p{
-	font-size: 20px;
+	font-size: 17px;
 }
 
 .fiveD span{

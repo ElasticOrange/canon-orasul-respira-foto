@@ -3,9 +3,14 @@
 @section('content')
 
 <div class="content-wrapper">
-    <p class="big-text">Inscrie-te in concurs si poti castiga echipament Canon in valoare de<br> <strong>3000 &#8364;</strong></p>
-    <p class="normal-text">Lorem ipsum dolor sit amet, ne ridens ornatus reprimique vix, ius errem laudem accommodare ne, eum et soleat libris. Mea dolorum abhorreant necessitatibus id. Tale viderer eripuit nam at. An quot iusto qui. Mel rebum altera reprimique eu, nibh viderer sea ad, an vix case integre prompta.</p>
-    <p class="normal-text">Urca maxim 5 fotografii in portofoliul tau</p>
+    <p class="headline">Tu ai pasiunea, prietenii îți oferă echipamentul.</p>
+    <p class="normal-text">Înscrie-ți fotografiile, adună voturile prietenilor și poți câștiga un Canon EOS 7D Mark II, obiectivul de Canon EF-S 17-55mm f/2.8 USM IS, pentru cadre generale, și obiectivul Canon EF 70-300mm f/4-5.6 USM IS, pentru a surprinde acțiunea de oriunde ai fi.</strong></p>
+    <p class="normal-text">
+        Prietenii tăi știu deja cât de mult îți place să fotografiezi, iar acum au ocazia să te susțintă!
+        Încarcă până la 5 fotografii din portofoliul tău, scrie-ne de ce te pasionează fotografia și apoi da sfară-n țară!
+        Prietenii au un singur lucru de facut: să încarce în contul tău orice fotografie realizată de ei. Fotografiile încărcate se transformă în puncte pentru tine. Cu cât mai multe puncte strânse, cu atât mai multe șanse de a câștiga echipamentul visat.
+    </p>
+    <p class="normal-text">Aici încarci până la 5 poze cool pe care le-ai făcut oriunde, oricând, oricum.</p>
 
     <div style="text-align: center; padding-top: 20px; padding-bottom: 20px;">
         <a class="register-add-photo" data-field-id="1">
@@ -54,19 +59,19 @@
     </div>
 
     <form action="/register/save-info" method="post" id="form-info">
-        <p class="normal-text">Spune povestea ta</p>
+        <p class="normal-text">Spune-ne în câteva cuvinte de ce te pasionează fotografia:</p>
         <div class="register-description register-description-border">
             <textarea class="register-description" name="description" id="description"></textarea>
         </div>
 
-        <p class="normal-text">Lasa-ne numarul tau de telefon</p>
+        <p class="normal-text">Avem nevoie de numărul tău de telefon; nu te speria, nu te vom spama. Vrem să luăm legătura cu tine cât mai repede, în cazul în care câștigi.</p>
         <input type="text" class="register-phone" name="phone" id="phone">
 
         <p class="normal-text red-button" style="margin-top: 10px; margin-bottom: 10px; width: 660px; margin-left: auto; margin-right: auto; display: none;" id="registerFeedback"></p>
         <div class="clearfix"></div>
 
         <div style="margin-top: 80px; margin-bottom: 150px; width: 100%; text-align: center;">
-            <a class="red-button red-button-border" id="submitExtraInfo"> Vezi cum arata profilul tau</a>
+            <a class="red-button red-button-border" id="submitExtraInfo"> Preview galeria ta</a>
         </div>
     </form>
 </div>

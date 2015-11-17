@@ -2,8 +2,8 @@
 
 @section('content')
 	<div class="motto">
-		<p>Donezi o poza</p>
-		<p>implinesti un vis</p>
+		<p>Tu ai pasiunea, prietenii îți oferă echipamentul.</p>
+        <p class="normal-text" style="line-height: 20px;">Cu sprijinul lor, echipamentul foto mult visat poate fi al tău. Cheamă-i să te ajute și fotografiile lor se transformă în puncte pentru tine.</p>
 	</div>
 
     <div class="popup_img1" id="popImg1"></div>
@@ -17,9 +17,7 @@
 			<img src="img/camera.png">
 		</div>
 		<div class="fiveD">
-			<p>Inscrie-te in concurs si</p>
-            <p>poti castiga echipament</p>
-			<p><strong>Canon de 3000 &#8364;</strong></p>
+			<p>Un kit format din <br>Canon EOS 7D Mark II <br>+ 17-55mm + 70 300mm + <br> 430EX poate fi al tău!<br> Înscrie-te! </p>
 		</div>
 	</div>
 @endsection
@@ -57,12 +55,12 @@
             positionPopupImage('popImg4',184,866, 26, 26)
             positionPopupImage('popImg5',1313,735, 52,53)
             positionPopupImage('popImg6',422,681, 52,54)
-            $("#popImg1").pulseSize();
-            $("#popImg2").pulseSize();
-            $("#popImg3").pulseSize();
-            $("#popImg4").pulseSize();
-            $("#popImg5").pulseSize();
-            $("#popImg6").pulseSize();
+            //$("#popImg1").pulseSize();
+            //$("#popImg2").pulseSize();
+            //$("#popImg3").pulseSize();
+            //$("#popImg4").pulseSize();
+            //$("#popImg5").pulseSize();
+            //$("#popImg6").pulseSize();
         });
 	</script>
 @endsection

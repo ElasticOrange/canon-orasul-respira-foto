@@ -10,16 +10,16 @@
     <div style="position: fixed; width: 700px; height: 500px; background-color: #cf2026; z-index: 9999; border: 1px dashed #ffffff; border-radius: 5px; display: none" id="infoModal">
         <p class="big-text" style="padding-top: 50px;">Felicitari !</p>
         <p class="normal-text" style="margin-top: 10px;">
-            Te-ai inscris in concurs si poti castiga echipament foto Canon <br>
-            Promoveaza-ti portofoliul si aduna cat mai multe poze de la prieteni<br><br>
-            <strong>O poza primita = o sansa in plus de a castiga</strong>
+            Felicitări! Ai dovedit că ești pasionat de fotografie! <br>
+            Te-ai înscris în concurs! Comunică prietenilor link-ul către portofoliul tău <br> și convinge-i să te voteze, încărcând fotografiile lor! <br>
+            Mai mulți prieteni care îți încarcă fotografii, mai multe șanse de câștig.
 
             <div style="margin-top: 30px; margin-bottom: 10px; width: 100%; text-align: center;">
                 <a class="white-button" id="shareOnFacebook"> Share on facebook</a>
             </div>
         </p>
         <p class="normal-text">
-            Sau distribuie linkul:
+            Sau copiază link-ul pentru prieteni:
             <div style="margin-top: 30px; margin-bottom: 30px; width: 100%; text-align: center;">
                 <span style="color: #ffffff; border: 1px dashed #ffffff; padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px;" >{{$redirectUrl}}</span>
             </div>
@@ -33,15 +33,18 @@
         <img src="/img/loader.gif">
     </div>
 
-    <p class="big-text">Inscrie-te in concurs si poti castiga echipament Canon in valoare de<br> <strong>3000 &#8364;</strong></p>
+    <p class="headline">Tu ai pasiunea, prietenii îți oferă echipamentul.</p>
+    <p class="big-text">Cu sprijinul lor, echipamentul foto mult visat poate fi al tău. Cheamă-i să te ajute și fotografiile lor se transformă în puncte pentru tine.</p>
 
     <div class="container-dotted-border" id="contentContainer">
         <div class="user-red-circle"></div>
         <img class="user-photo" src="/images/profilePhotos/thumb_100_{{md5($user->id)}}.jpg" >
         
         <p class="big-text" style="padding-top: 75px;">{{$user->name}}</p>
-
-        <a class="red-button">Donatii stranse 0</a>
+        <div class="clearfix"></div>
+        <div style="margin-top: 10px;">
+        <a class="red-button">Fotografii din partea prietenilor  0</a>
+        </div>
 
         <p class="normal-text" style="margin-top: 30px;">Despre mine</p>
 
@@ -61,7 +64,7 @@
             <textarea class="register-description" style="width: 670px;" id="textarea-user-description">{{$profile->description}}</textarea>
         </div>
 
-        <p class="normal-text">Imagini portofoliu</p>
+        <p class="normal-text">Fotografiile mele </p>
 
         <div style="text-align: center;">
             @for ($i = 0; $i < 3; $i++)

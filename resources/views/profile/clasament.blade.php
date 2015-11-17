@@ -7,9 +7,9 @@
 @section('content')
 
 <div class="content-wrapper" style="position: relative;">
+        <p class="headline">Fotografii cei mai apreciați</p>
         <p class="big-text">
-            Alege-ti fotograful preferat si ajuta-l<br>
-            sa castige echipamentul dorit
+            Alege-ti fotograful preferat și ajută-l să câștige, prin încărcarea unei fotografii.
         </p>
     @foreach ($profiles as $profile)
 
@@ -28,7 +28,7 @@
 
             <div class="red-button" style="width: 120px; float: right; height: 120px; margin: 5px; padding: 0px; border-radius: 5px;">
                 <div style="line-height: 50px; font-size: 48px; font-weight: bold; margin-top: 30px;">{{$profile->voteCount}}</div>
-                <div style="line-height: 10px; font-size: 16px; margin-top: 15px;">donatii stranse </div>
+                <div style="line-height: 15px; font-size: 16px; margin-top: 10px;">fotografii  stranse </div>
             </div>
 
             <div style="width: 270px; height: 55px; margin-top: 10px; float: left; text-align: left;">
@@ -38,7 +38,7 @@
             </div>
 
             <a class="vote-overlay" href="/profile/index/{{$profile->id}}">
-                <div class="red-button red-button-border" style="width: 50%; margin-left: auto; margin-right: auto; margin-top: 45px;">Doneaza-i o poza</div>
+                <div class="red-button red-button-border" style="width: 50%; margin-left: auto; margin-right: auto; margin-top: 45px;">Încarcă-i o poză</div>
             </a>
 
             <div class="clearfix"></div>
