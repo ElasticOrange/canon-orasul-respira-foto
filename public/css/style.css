@@ -214,6 +214,78 @@ p{
     border: 1px solid #ffffff;
 }
 
+.how-it-works{
+    width: 615px;
+    height: 774px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/img/how-it-works.png');
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.popup_img1{
+    width: 27px;
+    height: 25px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/img/popups/img1.png');
+    position: fixed;
+}
+
+.popup_img2{
+    width: 28px;
+    height: 26px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/img/popups/img2.png');
+    position: fixed;
+}
+
+.popup_img3{
+    width: 13px;
+    height: 14px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/img/popups/img3.png');
+    position: fixed;
+}
+
+.popup_img4{
+    width: 26px;
+    height: 26px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/img/popups/img4.png');
+    position: fixed;
+}
+
+.popup_img5{
+    width: 52px;
+    height: 53px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/img/popups/img5.png');
+    position: fixed;
+}
+
+.popup_img6{
+    width: 52px;
+    height: 54px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/img/popups/img6.png');
+    position: fixed;
+}
+
 /*Header*/
 .header{
 	width: 740px;

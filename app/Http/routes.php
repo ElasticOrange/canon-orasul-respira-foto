@@ -20,4 +20,5 @@ Route::group(['middleware' => 'auth'], function()
 Route::controller('/profile','ProfileController');
 Route::controller('/facebook','FacebookController');
 Route::controller('/upload-image', 'UploadImageController');
+Route::controller('/cum-functioneaza', 'HowItWorksController');
 Route::controller('/', 'HomeController');

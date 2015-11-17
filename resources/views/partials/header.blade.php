@@ -10,7 +10,7 @@
             <a href="/register">Inscrie-te</a>
         </li>
         <li class="{{$selectedPage==3 ? 'active' : ''}}">
-            <a href="">Cum functioneaza</a>
+            <a href="/cum-functioneaza">Cum functioneaza</a>
         </li>
     </ul>
 </nav>
