@@ -1,6 +1,6 @@
 @font-face {
-    font-family: Kalinga;
-    src: url(fonts/kalinga.ttf);
+    font-family: Ghotic;
+    src: url(fonts/GOTHIC.TTF);
 }
 
 *{
@@ -8,7 +8,7 @@
 }
 
 body{
-	font-family: Kalinga, sans-serif;
+	font-family: Ghotic, sans-serif;
 }
 
 p{
@@ -19,9 +19,9 @@ p{
 .wrapper{
  	width: 100%;
  	height: 634px;
- 	background-position: center;
-    background-size: cover;
+
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .wrapper1{
@@ -233,64 +233,71 @@ p{
     position: relative;
 }
 
+.popup_img{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+}
 .popup_img1{
     width: 27px;
     height: 25px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     background-image: url('/img/popups/img1.png');
-    position: fixed;
 }
-
 .popup_img2{
-    width: 28px;
-    height: 26px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    width: 27px;
+    height: 27px;
     background-image: url('/img/popups/img2.png');
-    position: fixed;
 }
-
 .popup_img3{
-    width: 13px;
-    height: 14px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    width: 26px;
+    height: 27px;
     background-image: url('/img/popups/img3.png');
-    position: fixed;
 }
-
 .popup_img4{
+    width: 14px;
+    height: 13px;
+    background-image: url('/img/popups/img4.png');
+}
+.popup_img5{
     width: 26px;
     height: 26px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url('/img/popups/img4.png');
-    position: fixed;
-}
-
-.popup_img5{
-    width: 52px;
-    height: 53px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     background-image: url('/img/popups/img5.png');
-    position: fixed;
 }
-
 .popup_img6{
     width: 52px;
-    height: 54px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: 52px;
     background-image: url('/img/popups/img6.png');
-    position: fixed;
+}
+.popup_img7{
+    width: 27px;
+    height: 26px;
+    background-image: url('/img/popups/img7.png');
+}
+.popup_img8{
+     width: 25px;
+     height: 18px;
+     background-image: url('/img/popups/img8.png');
+ }
+.popup_img9{
+    width: 26px;
+    height: 27px;
+    background-image: url('/img/popups/img9.png');
+}
+.popup_img10{
+    width: 14px;
+    height: 14px;
+    background-image: url('/img/popups/img10.png');
+}
+.popup_img11{
+    width: 13px;
+    height: 13px;
+    background-image: url('/img/popups/img11.png');
+}
+.popup_img12{
+    width: 27px;
+    height: 25px;
+    background-image: url('/img/popups/img12.png');
 }
 
 /*Header*/

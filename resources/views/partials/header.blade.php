@@ -7,10 +7,10 @@
             <a href="/profile/clasament">Portofolii</a>
         </li>
         <li class="{{$selectedPage==2 ? 'active' : ''}}">
-            <a href="/register">Inscrie-te</a>
+            <a href="/register">Înscrie-te</a>
         </li>
         <li class="{{$selectedPage==3 ? 'active' : ''}}">
-            <a href="/cum-functioneaza">Cum functioneaza</a>
+            <a href="/cum-functioneaza">Cum functionează</a>
         </li>
     </ul>
 </nav>

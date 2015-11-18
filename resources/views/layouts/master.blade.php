@@ -50,21 +50,27 @@
 		
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 		<script>
+            /*
 			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
 			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
 			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
 			e.src='https://www.google-analytics.com/analytics.js';
 			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
 			ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+              */
 
             $(document).ready(function()
             {
+                console.log('master');
                 var mainWrapper = $(".wrapper").first();
                 var mainLayer = $(".layer").first();
                 var mainContent = $(".content").first();
 
                 mainWrapper.width($(window).width());
                 mainWrapper.height($(window).height());
+
+                mainWrapper.css('backgroundPositionX',($(window).width()-2048)/2)
+                mainWrapper.css('backgroundPositionY',($(window).height()-1313)/2)
 
                 mainContent.width($(window).width());
                 mainContent.height($(window).height());
