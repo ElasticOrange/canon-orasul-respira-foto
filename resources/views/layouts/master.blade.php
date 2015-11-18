@@ -66,27 +66,42 @@
                 var mainLayer = $(".layer").first();
                 var mainContent = $(".content").first();
 
-                mainWrapper.width($(window).width());
-                mainWrapper.height($(window).height());
+                function scaleBG(){
+                    var ws = $(window).width();
+                    var hs = $(window).height();
+                    var wi = 2048;
+                    var hi = 1313;
+                    var rs = ws/rs;
+                    var ri = wi/ri;
 
-                mainWrapper.css('backgroundPositionX',($(window).width()-2048)/2)
-                mainWrapper.css('backgroundPositionY',($(window).height()-1313)/2)
+                    var wnew = 0;
+                    var hnew = 0;
+                    if (rs>ri){
+                        wnew = wi * hs/hi;
+                        hnew = hs;
+                    }
+                    else{
+                        wnew = ws;
+                        hnew = hi * ws/wi;
+                    }
 
-                mainContent.width($(window).width());
-                mainContent.height($(window).height());
+                    mainWrapper.css('backgroundSize',wnew+"px "+hnew+"px");
+                    mainWrapper.css('backgroundPositionX',(ws-wnew)/2)
+                    mainWrapper.css('backgroundPositionY',(hs-hnew)/2)
 
-                mainLayer.width($(window).width());
-                mainLayer.height($(window).height());
+                    mainWrapper.width(ws);
+                    mainWrapper.height(hs);
+
+                    mainContent.width(ws);
+                    mainContent.height(hs);
+
+                    mainLayer.width(ws);
+                    mainLayer.height(hs);
+                }
+                scaleBG();
 
                 $(window).resize(function(){
-                    mainWrapper.width($(window).width());
-                    mainWrapper.height($(window).height());
-
-                    mainContent.width($(window).width());
-                    mainContent.height($(window).height());
-
-                    mainLayer.width($(window).width());
-                    mainLayer.height($(window).height());
+                    scaleBG();
                 })
             })
 		</script>
