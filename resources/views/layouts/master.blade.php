@@ -34,7 +34,9 @@
 				</div>
 
 				<div class="footer">
+                    <div style="width: 740px; margin-left: auto; margin-right: auto;">
 					@include('partials.footer')
+                    </div>
 				</div>
 			</div>
 		</div>

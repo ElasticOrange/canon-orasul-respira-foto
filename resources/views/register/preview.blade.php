@@ -43,7 +43,7 @@
         <p class="big-text" style="padding-top: 75px;">{{$user->name}}</p>
         <div class="clearfix"></div>
         <div style="margin-top: 10px;">
-        <a class="red-button">Fotografii din partea prietenilor  0</a>
+        <a class="red-button">Fotografii din partea prietenilor 0</a>
         </div>
 
         <p class="normal-text" style="margin-top: 30px;">Despre mine</p>

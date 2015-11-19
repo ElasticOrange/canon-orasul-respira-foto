@@ -236,7 +236,6 @@
                         $("#removePhotoVote").show();
                         $("#voteFeedback").html("").hide();
                     }
-
                 });
             return false;
         }

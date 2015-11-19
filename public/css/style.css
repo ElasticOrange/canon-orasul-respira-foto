@@ -78,7 +78,7 @@ p{
 }
 
 .vote-overlay{
-    width: 100%; height: 100%; background-color:rgba(208, 0, 0, 0.3); position: absolute; top:0; left:0; display: none;
+    width: 100%; height: 100%; background-color:rgba(0, 0, 0, 0.3); position: absolute; top:0; left:0; display: none;
 }
 
 .container-dotted-border:hover .vote-overlay{
@@ -97,7 +97,7 @@ p{
     font-size: 30px;
     line-height: 40px;
     text-align: center;
-    padding-top: 10px;
+    padding-top:38px;
 }
 
 .big-text{
@@ -201,6 +201,8 @@ p{
     border-radius: 3px;
     text-decoration: none;
     padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     cursor: pointer;
 }
 
@@ -270,7 +272,7 @@ p{
     background-image: url('/img/popups/img6.png');
 }
 .popup_img7{
-    width: 27px;
+    width: 26px;
     height: 26px;
     background-image: url('/img/popups/img7.png');
 }
@@ -355,15 +357,15 @@ p{
 
 /*Footer*/
 .footer{
-	width: 170px;
+	width: 100%;
 	height: 116px;
 	position: absolute;
 	bottom: 30px;
-	right: 0;
 }
 
 .logo{
 	height: 116px;
+    float: right;
 }
 
 .logo img{

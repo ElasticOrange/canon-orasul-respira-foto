@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-<p class="big-text" style="padding-top: 50px;">Mecanismul pe scurt</p>
+<p class="headline" style="padding-top: 58px;" >Mecanismul pe scurt</p>
 	<div class="how-it-works">
 
         <div style="position: absolute;top: 47px; left: 415px; width: 260px;">
