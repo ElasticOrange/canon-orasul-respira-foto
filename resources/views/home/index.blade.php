@@ -37,12 +37,24 @@
 
 @section('javascript')
 	<script type="text/javascript">
-		$.fn.pulseSize = function(pulseTime, pulseDiffX, pulseDiffY, ratio) {
+		var timeMin = 6000;
+		var timeMax = 10000;
+
+		$.fn.pulseSize = function(pulseTime, pulseDiffX, pulseDiffY, ratio)
+		{
 			this.animate({height:'+='+pulseDiffY, width:'+='+pulseDiffX, marginLeft:'-='+pulseDiffX/2, marginTop:'-='+pulseDiffY/2 },pulseTime*ratio,
 				function(){
 					$(this).animate( {height:'-='+pulseDiffY, width:'-='+pulseDiffX, marginLeft:'+='+pulseDiffX/2, marginTop:'+='+pulseDiffY/2},pulseTime *ratio,
 						function(){
-							$(this).pulseSize(pulseTime, pulseDiffX, pulseDiffY, ratio);
+							var $this = $(this);
+							setTimeout(
+								function()
+								{
+									// debugger;
+									$this.pulseSize(_.random(timeMin, timeMax), pulseDiffX, pulseDiffY, ratio)
+								},
+								1000
+							);
 						}
 					);
 				}
@@ -80,7 +92,7 @@
 			positionPopupImage('popImg2',551,630);
 			positionPopupImage('popImg3',1444,630);
 			positionPopupImage('popImg4',634,883);
-			positionPopupImage('popImg5',578,1136);
+			positionPopupImage('popImg5',578,1036);
 			positionPopupImage('popImg6',1613,736);
 			positionPopupImage('popImg7',1761,988);
 			positionPopupImage('popImg8',1408,1023);
@@ -89,18 +101,18 @@
 			positionPopupImage('popImg11',488,985);
 			positionPopupImage('popImg12',298,1098);
 
-			$("#popImg1").pulseSize(10000, 50, 47, 0.2);
-			$("#popImg2").pulseSize(6000, 15, 15, 0.2);
-			$("#popImg3").pulseSize(5000, 10, 10, 0.2);
-			$("#popImg4").pulseSize(4000, 10, 10, 0.2);
-			$("#popImg5").pulseSize(8000, 30, 27, 0.2);
-			$("#popImg6").pulseSize(8000, 40, 40, 0.2);
-			$("#popImg7").pulseSize(10000, 50, 47, 0.2);
-			$("#popImg8").pulseSize(6000, 30, 30, 0.2);
-			$("#popImg9").pulseSize(5000, 10, 10, 0.2);
-			$("#popImg10").pulseSize(4000, 10, 10, 0.2);
-			$("#popImg11").pulseSize(10000, 25, 23, 0.2);
-			$("#popImg12").pulseSize(8000, 40, 40, 0.2);
+			$("#popImg1").pulseSize(_.random(timeMin, timeMax), 50, 47, 0.2);
+			$("#popImg2").pulseSize(_.random(timeMin, timeMax), 15, 15, 0.2);
+			$("#popImg3").pulseSize(_.random(timeMin, timeMax), 10, 10, 0.2);
+			$("#popImg4").pulseSize(_.random(timeMin, timeMax), 10, 10, 0.2);
+			$("#popImg5").pulseSize(_.random(timeMin, timeMax), 30, 27, 0.2);
+			$("#popImg6").pulseSize(_.random(timeMin, timeMax), 40, 40, 0.2);
+			$("#popImg7").pulseSize(_.random(timeMin, timeMax), 50, 47, 0.2);
+			$("#popImg8").pulseSize(_.random(timeMin, timeMax), 30, 30, 0.2);
+			$("#popImg9").pulseSize(_.random(timeMin, timeMax), 10, 10, 0.2);
+			$("#popImg10").pulseSize(_.random(timeMin, timeMax), 10, 10, 0.2);
+			$("#popImg11").pulseSize(_.random(timeMin, timeMax), 25, 23, 0.2);
+			$("#popImg12").pulseSize(_.random(timeMin, timeMax), 40, 40, 0.2);
 			return true;
 		});
 	</script>
