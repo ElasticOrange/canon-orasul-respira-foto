@@ -62,53 +62,6 @@
 			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
 			ga('create','UA-XXXXX-X','auto');ga('send','pageview');
 			  */
-
-			$(document).ready(function()
-			{
-				/*
-				console.log('master');
-				var mainWrapper = $(".wrapper").first();
-				var mainLayer = $(".layer").first();
-				var mainContent = $(".content").first();
-
-				function scaleBG(){
-					var ws = $(window).width();
-					var hs = $(window).height();
-					var wi = 2048;
-					var hi = 1313;
-					var rs = ws/rs;
-					var ri = wi/ri;
-
-					var wnew = 0;
-					var hnew = 0;
-					if (rs>ri){
-						wnew = wi * hs/hi;
-						hnew = hs;
-					}
-					else{
-						wnew = ws;
-						hnew = hi * ws/wi;
-					}
-
-					mainWrapper.css('backgroundSize',wnew+"px "+hnew+"px");
-					mainWrapper.css('backgroundPosition',((ws-wnew)/2)+"px "+((hs-hnew)/2)+"px");
-
-					mainWrapper.width(ws);
-					mainWrapper.height(hs);
-
-					mainContent.width(ws);
-					mainContent.height(hs);
-
-					mainLayer.width(ws);
-					mainLayer.height(hs);
-				}
-				scaleBG();
-
-				$(window).resize(function(){
-					scaleBG();
-				})
-				*/
-			})
 		</script>
 		<!-- /Scripts -->
 
