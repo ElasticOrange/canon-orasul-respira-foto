@@ -9,7 +9,7 @@
         </div>
 
         <div style="position: absolute;top: 228px; left: 91px; width: 347px;">
-            Aduni susținători, adică rogi prietenii să încarce o fotografie pentru tine… orice fotografie. :) Fiecare fotografie din partea lor se transformă în puncte pentru tine
+            Aduni susținători, adică rogi prietenii să încarce o fotografie pentru tine. Fiecare fotografie din partea lor se transformă în puncte pentru tine
         </div>
 
         <div style="position: absolute;top: 444px; left: 336px; width: 363px;">

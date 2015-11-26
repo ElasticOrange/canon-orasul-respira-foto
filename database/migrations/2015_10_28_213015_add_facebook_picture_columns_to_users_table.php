@@ -26,8 +26,10 @@ class AddFacebookPictureColumnsToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('is_silhouette')->nullable();
-            $table->string('url')->nullable();
+            $table->dropColumn(
+                'is_silhouette',
+                'url'
+            );
         });
     }
 }

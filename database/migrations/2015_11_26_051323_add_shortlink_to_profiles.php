@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddTelToUsersTable extends Migration
+class AddShortlinkToProfiles extends Migration
 {
     /**
      * Run the migrations.
@@ -12,8 +12,8 @@ class AddTelToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('tel')->nullable();
+        Schema::table('profiles', function (Blueprint $table) {
+            $table->string('shortLink')->nullable();
         });
     }
 
@@ -24,9 +24,9 @@ class AddTelToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('profiles', function (Blueprint $table) {
             $table->dropColumn(
-                'tel'
+                'shortLink'
             );
         });
     }

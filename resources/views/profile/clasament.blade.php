@@ -7,7 +7,7 @@
 @section('content')
 
 <div class="content-wrapper" style="position: relative;">
-        <p class="headline">Fotografii cei mai apreciați</p>
+        <p class="headline">Fotografii cei mai votați</p>
         <p class="big-text">
             Alege-ti fotograful preferat și ajută-l să câștige, prin încărcarea unei fotografii.
         </p>
@@ -37,7 +37,7 @@
             </div>
 
             <a class="vote-overlay" href="/profile/index/{{$profile->id}}">
-                <div class="red-button red-button-border" style="width: 150px; margin-left: auto; margin-right: auto; margin-top: 45px; font-weight: bold;">Încarcă-i o poză</div>
+                <div class="red-button red-button-border" style="width: 190px; margin-left: auto; margin-right: auto; margin-top: 45px; font-weight: bold;">Încarcă-i o fotografie</div>
             </a>
 
             <div class="clearfix"></div>
@@ -45,7 +45,9 @@
         </div>
     @endforeach
 
-
+    <div style="text-align: center;">
+    {!!$profiles->render()!!}
+    </div>
 </div>
 
 @endsection

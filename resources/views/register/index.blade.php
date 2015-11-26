@@ -4,13 +4,13 @@
 
 <div class="content-wrapper">
     <p class="headline">Tu ai pasiunea, prietenii îți oferă echipamentul.</p>
-    <p class="normal-text">Înscrie-ți fotografiile, adună voturile prietenilor și poți câștiga un Canon EOS 7D Mark II, obiectivul de Canon EF-S 17-55mm f/2.8 USM IS, pentru cadre generale, și obiectivul Canon EF 70-300mm f/4-5.6 USM IS, pentru a surprinde acțiunea de oriunde ai fi.</strong></p>
+    <p class="normal-text">Completează cu portofoliul tău, adună fotografiile prietenilor și poți câștiga un Canon EOS 7D Mark II, obiectivul de Canon EF-S 17-55mm f/2.8 USM IS, pentru cadre generale, și bliţul  Speedlight 430EX III, pentru a surprinde acțiunea de oriunde ai fi.</strong></p>
     <p class="normal-text">
         Prietenii tăi știu deja cât de mult îți place să fotografiezi, iar acum au ocazia să te susțintă!
         Încarcă până la 5 fotografii din portofoliul tău, scrie-ne de ce te pasionează fotografia și apoi da sfară-n țară!
         Prietenii au un singur lucru de facut: să încarce în contul tău orice fotografie realizată de ei. Fotografiile încărcate se transformă în puncte pentru tine. Cu cât mai multe puncte strânse, cu atât mai multe șanse de a câștiga echipamentul visat.
     </p>
-    <p class="normal-text">Aici încarci până la 5 poze cool pe care le-ai făcut oriunde, oricând, oricum.</p>
+    <p class="normal-text">Aici încarci cele mai interesante fotografii ale tale.</p>
 
     <div style="text-align: center; padding-top: 20px; padding-bottom: 20px;">
         <a class="register-add-photo" data-field-id="1">

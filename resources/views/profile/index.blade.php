@@ -31,7 +31,7 @@
         <p class="normal-text">
             Sau distribuie linkul:
         <div style="margin-top: 30px; margin-bottom: 30px; width: 100%; text-align: center;">
-            <span style="color: #ffffff; border: 1px dashed #ffffff; padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px;" >{{$redirectUrl}}</span>
+            <span style="color: #ffffff; border: 1px dashed #ffffff; padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px;" >{{$profile->shortLink}}</span>
         </div>
         </p>
         <div style="margin-top: 30px; margin-bottom: 30px; width: 100%; text-align: center;">
@@ -129,18 +129,20 @@
                 @endif
             @else
                 <p class="normal-text" style="margin-top: 30px; margin-bottom: 30px;">{{$user->name}} iti multumeste pentru votul tau!</p>
-
-                <div style="margin-top: 30px; margin-bottom: 10px; width: 100%; text-align: center;">
-                    <a class="white-button shareOnFacebook"> Share on facebook</a>
-                </div>
             @endif
         @else
-            <div style="margin-top: 30px; margin-bottom: 10px; width: 100%; text-align: center;">
-                <a class="white-button shareOnFacebook"> Share on facebook</a>
-            </div>
+
         @endif
 
-
+        <div style="margin-top: 30px; margin-bottom: 10px; width: 100%; text-align: center;">
+            <a class="white-button shareOnFacebook"> Share on facebook</a>
+        </div>
+        <p class="normal-text">
+            Sau distribuie linkul:
+            <div style="margin-top: 30px; margin-bottom: 30px; width: 100%; text-align: center;">
+                <span style="color: #ffffff; border: 1px dashed #ffffff; padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px;" >{{$profile->shortLink}}</span>
+            </div>
+        </p>
 
         <p class="normal-text" style="margin-top: 30px; margin-bottom: 30px;">Galerie foto susținători ({{count($votes)}})</p>
 

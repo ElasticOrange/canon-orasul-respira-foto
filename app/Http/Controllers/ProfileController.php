@@ -46,7 +46,6 @@ class ProfileController extends Controller
                 'votes' => $profile->votes()->where('isActive', '1')->get(),
                 'voted' => $voted,
                 'photos' => $photos,
-                'redirectUrl' => shortenUrl( URL::to('/profile/index/'.$profile->id) ),
                 'pageUrl' => URL::to('/profile/index/'.$profile->id)
             );
             return view('profile.index',$data);
@@ -60,8 +59,9 @@ class ProfileController extends Controller
     {
 
         $profiles = Profile::select(DB::raw('*,(select count(*) from votes where profile_id=profiles.id and isActive=1) as voteCount'))
+            ->where('isActive','=', '1')
             ->orderBy('voteCount', 'desc')
-            ->get();
+            ->paginate(20);
 
         $data = array(
             'selectedPage' => 1,

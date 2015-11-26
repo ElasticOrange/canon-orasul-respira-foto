@@ -33,11 +33,13 @@
 					@yield('content')
 				</div>
 
+                @if ($selectedPage==0)
 				<div class="footer">
                     <div style="width: 740px; margin-left: auto; margin-right: auto;">
 					@include('partials.footer')
                     </div>
 				</div>
+                @endif
 			</div>
 		</div>
 
@@ -88,8 +90,7 @@
                     }
 
                     mainWrapper.css('backgroundSize',wnew+"px "+hnew+"px");
-                    mainWrapper.css('backgroundPositionX',(ws-wnew)/2)
-                    mainWrapper.css('backgroundPositionY',(hs-hnew)/2)
+                    mainWrapper.css('backgroundPosition',((ws-wnew)/2)+"px "+((hs-hnew)/2)+"px");
 
                     mainWrapper.width(ws);
                     mainWrapper.height(hs);

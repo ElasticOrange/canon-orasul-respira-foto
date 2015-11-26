@@ -27,7 +27,9 @@ class ChangeUserProfileToProfileIdAddIsActiveForVotes extends Migration
     {
         Schema::table('votes', function (Blueprint $table) {
             $table->renameColumn('profile_id', 'user_profile');
-            $table->boolean('isActive')->default(false);
+            $table->dropColumn(
+                'is_Active'
+            );
         });
     }
 }

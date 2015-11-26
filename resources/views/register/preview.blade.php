@@ -21,7 +21,7 @@
         <p class="normal-text">
             Sau copiază link-ul pentru prieteni:
             <div style="margin-top: 30px; margin-bottom: 30px; width: 100%; text-align: center;">
-                <span style="color: #ffffff; border: 1px dashed #ffffff; padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px;" >{{$redirectUrl}}</span>
+                <span style="color: #ffffff; border: 1px dashed #ffffff; padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px;" >{{$profile->shortLink}}</span>
             </div>
         </p>
         <div style="margin-top: 30px; margin-bottom: 30px; width: 100%; text-align: center;">

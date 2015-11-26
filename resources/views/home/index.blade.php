@@ -3,7 +3,7 @@
 @section('content')
 	<div class="motto">
 		<p>Tu ai pasiunea, prietenii îți oferă echipamentul.</p>
-        <p class="normal-text" style="line-height: 27px; font-size: 22px;">Cu sprijinul lor, echipamentul foto mult visat poate fi al tău. Cheamă-i să te ajute și fotografiile lor se transformă în puncte pentru tine.</p>
+        <p class="normal-text" style="line-height: 27px; font-size: 20px;">Cu sprijinul lor, echipamentul foto mult visat poate fi al tău. Invită-ti prietenii să te ajute și fotografiile lor se transformă în puncte pentru tine.</p>
 	</div>
 
     <div class="popup_img popup_img1" id="popImg1"></div>

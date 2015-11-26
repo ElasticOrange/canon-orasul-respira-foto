@@ -16,10 +16,18 @@ class RegistrationController extends Controller
 
     public function getIndex()
     {
-        $profile = Profile::where("user_id","=",Auth::id())->first();
+        $profile = Profile::firstOrCreate(['user_id' => Auth::id()]);
+
         if ($profile && $profile->isActive==1){
             return redirect('/profile/index/'.$profile->id);
         }
+
+        if ($profile->shortLink==""){
+            $profile->user_id = Auth::id();
+            $profile->shortLink = shortenUrl( URL::to('/profile/index/'.$profile->id) );
+        }
+
+        $profile->save();
 
         $data = array(
             'selectedPage' => 2
@@ -84,7 +92,6 @@ class RegistrationController extends Controller
             'selectedPage' => 2,
             'profile' => Profile::where("user_id","=",Auth::id())->first(),
             'user' => Auth::user(),
-            'redirectUrl' => shortenUrl( URL::to('/profile/index/'.$profile->id) ),
             'pageUrl' => URL::to('/profile/index/'.$profile->id),
             'photos' => $photos
         );

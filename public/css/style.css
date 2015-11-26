@@ -57,6 +57,22 @@ p{
     margin-right: auto;
 }
 
+/*Pagination*/
+ul.pagination {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul.pagination li {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+ul.pagination li a{
+    text-decoration: none;
+}
 /*Register*/
 .wide-thumbnail{
     width: 180px; height: 135px; position: relative; text-align: center; line-height: 135px; float: left; margin: 15px;
