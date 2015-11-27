@@ -18,4 +18,10 @@ class HomeController extends Controller
         $data = array('selectedPage' => 0);
 		return view('home.index',$data);
 	}
+
+    public function postIndex()
+    {
+        $data = array('selectedPage' => 0);
+        return view('home.index',$data);
+    }
 }
