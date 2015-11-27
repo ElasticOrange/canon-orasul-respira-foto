@@ -124,7 +124,7 @@
                     </div>
                 @else
                     <div style="margin-top: 12px; margin-bottom: 30px; margin-top: 30px; width: 100%; text-align: center;">
-                        <a class="red-button red-button-border" style="line-height: 30px;" href="{{$fbLink}}"><img src="/img/fb-logo.png" height="30px"> Login with Facebook </a>
+                        <a class="red-button red-button-border" style="line-height: 30px;" href="{{$fbLink}}" id="login-fb-js"><img src="/img/fb-logo.png" height="30px"> Login with Facebook </a>
                     </div>
                 @endif
             @else
@@ -190,6 +190,12 @@
     $(document).ready(function()
     {
         var addedPhoto=false;
+
+        $('#login-fb-js').click(function(){
+            FB.login(function(response) {
+                // handle the response
+            }, {scope: 'email'});
+        });
 
         $(".photoRow1").first().css("margin-left",($("#contentContainer").width()-$(".photoRow1").length*210)/2+15);
         $(".photoRow2").first().css("margin-left",($("#contentContainer").width()-$(".photoRow2").length*210)/2+15);
