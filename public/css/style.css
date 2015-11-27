@@ -406,6 +406,14 @@ ul.pagination li a {
 	border-radius: 50%;
 	background-color: #d00000;
 }
+.bulina_noua {
+	width: 435px;
+	position: absolute;
+	top: 252px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
 .camera {
 	width: 126px;
 	height: 112px;
