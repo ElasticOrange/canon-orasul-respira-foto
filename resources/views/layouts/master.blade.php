@@ -96,9 +96,9 @@
 
 		window.fbAsyncInit = function() {
 			FB.init({
-				appId: '1059827974029585',
-				xfbml: true,
-				version: 'v2.5'
+				appId      : '1059827974029585',
+				xfbml      : true,
+				version    : 'v2.4'
 			});
 
 			FB.Canvas.setAutoGrow();
