@@ -18,19 +18,12 @@ p {
 	background-repeat: no-repeat;
 	overflow: hidden;
 }
-.wrapper1 {
-	background: url(/img/background.png) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+.wrapper1{
+	background-image: url('/img/background.png');
 }
-.wrapper2 {
-	background: url(/img/background-blurred.png) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+
+.wrapper2{
+	background-image: url('/img/background-blurred.png');
 }
 .layer {
 	position: absolute;
