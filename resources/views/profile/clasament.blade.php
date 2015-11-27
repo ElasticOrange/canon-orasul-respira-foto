@@ -7,10 +7,10 @@
 @section('content')
 
 <div class="content-wrapper" style="position: relative;">
-		<p class="headline">Fotografii cei mai votați</p>
-		<p class="big-text">
-			Alege-ti fotograful preferat și ajută-l să câștige, prin încărcarea unei fotografii.
-		</p>
+	<p class="headline">Fotografii cei mai votați</p>
+	<p class="big-text">
+		Alege-ti fotograful preferat și ajută-l să câștige, prin încărcarea unei fotografii.
+	</p>
 	@foreach ($profiles as $profile)
 
 		<div class="container-dotted-border" style="border-radius: 5px; margin-top: 20px; margin-bottom: 0px; width: 650px;">
@@ -44,12 +44,12 @@
 
 		</div>
 
-		<div class="spacer"></div>
 	@endforeach
 
 	<div style="text-align: center;">
 	{!!$profiles->render()!!}
 	</div>
+	<div class="spacer"></div>
 </div>
 
 @endsection
