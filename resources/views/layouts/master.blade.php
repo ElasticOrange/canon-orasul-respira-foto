@@ -103,9 +103,13 @@
 
 			FB.Canvas.setAutoGrow();
 
-			$(document).ready(function() {
-				window.setInterval(scaleBG, 1000);
-			});
+			setTimeout(
+				function() {
+					scaleBG();
+				},
+				200
+			);
+
 		};
 
 		(function(d, s, id) {
