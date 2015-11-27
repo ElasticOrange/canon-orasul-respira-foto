@@ -101,6 +101,15 @@
 					 scaleBG();
 				 })
 			 })
+
+			$(document).ready(function(){
+				setInterval(
+					function(){
+						FB.Canvas.setSize();
+					},
+					1000
+				);
+			});
 		</script>
 		<!-- /Scripts -->
 
