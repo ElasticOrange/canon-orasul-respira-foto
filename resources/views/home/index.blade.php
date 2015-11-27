@@ -20,20 +20,12 @@
 	<div class="popup_img popup_img12" id="popImg12"></div>
 
 	<a href="/register" style="cursor: pointer">
-		<!--div class="circle">
-			<div class="camera">
-				<img src="img/camera.png">
-			</div>
-			<div class="fiveD">
-				<p>Un kit format din <br>Canon EOS 7D Mark II <br>+ 17-55mm + 70 300mm + <br> 430EX poate fi al tău!  </p>
-			</div>
-		</div-->
-        <div class="bulina_noua">
-            <img style="width: 400px" src="img/bulina_noua.png">
-        </div>
+		<div class="bulina_noua">
+			<img style="width: 400px" src="img/bulina_noua.png">
+		</div>
 	</a>
 
-	<div style="position:absolute; top: 640px; width: 100%; text-align: center; ">
+	<div style="position:absolute; top: 640px; width: 100%; text-align: center; margin-bottom: 50px;">
 		<a class="red-button red-button-border" href="/register" > Înscrie-te!</a>
 	</div>
 @endsection
