@@ -30,11 +30,13 @@
 				@yield('content')
 			</div>
 
-			<div class="footer">
-				<div style="width: 740px; margin-left: auto; margin-right: auto;">
-					@if ($selectedPage==0) @include('partials.footer') @endif
+			@if ($selectedPage==0)
+				<div class="footer">
+					<div style="width: 740px; margin-left: auto; margin-right: auto;">
+						 @include('partials.footer')
+					</div>
 				</div>
-			</div>
+			@endif
 		</div>
 
 		<div class="spacer">

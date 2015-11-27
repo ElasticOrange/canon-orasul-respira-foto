@@ -2,10 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-
 class HomeController extends Controller
 {
 	/**
@@ -15,13 +11,15 @@ class HomeController extends Controller
 	 */
 	public function getIndex()
 	{
-        $data = array('selectedPage' => 0);
-		return view('home.index',$data);
+		$data = array('selectedPage' => 0);
+
+		return view('home.index', $data);
 	}
 
-    public function postIndex()
-    {
-        $data = array('selectedPage' => 0);
-        return view('home.index',$data);
-    }
+	public function postIndex()
+	{
+		$data = array('selectedPage' => 0);
+
+		return view('home.index', $data);
+	}
 }
