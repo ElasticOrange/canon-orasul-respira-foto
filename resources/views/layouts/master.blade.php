@@ -1,137 +1,128 @@
 <!doctype html>
 <html class="no-js" lang="">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title></title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="apple-touch-icon" href="apple-touch-icon.png">
-		<!-- Place favicon.ico in the root directory -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="stylesheet" href="/css/normalize.css">
-		<link rel="stylesheet" href="/css/main.css">
-		<link rel="stylesheet" href="/css/style.css">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<!-- Place favicon.ico in the root directory -->
 
-		@yield('css')
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/style.css"> @yield('css') @yield('fbTags')
+</head>
 
-		@yield('fbTags')
-	</head>
+<body>
+	<div style="position: fixed; width: 100%; height: 100%; top:0; left: 0; background: rgba(0,0,0,0.6); z-index: 9998; display: none;" id="overlay"></div>
 
-	<body >
-		<div style="position: fixed; width: 100%; height: 100%; top:0; left: 0; background: rgba(0,0,0,0.6); z-index: 9998; display: none;" id="overlay"></div>
-
-		<div class="wrapper {{$selectedPage==0 ? 'wrapper1' : 'wrapper2'}}">
-			<div class="layer"></div>
-			<div class="content">
-				<div class="header">
-					@include('partials.header')
-				</div>
-
-				<div class="main">
-					@yield('content')
-				</div>
-
-				<div class="footer">
-					<div style="width: 740px; margin-left: auto; margin-right: auto;">
-						@if ($selectedPage==0)
-							@include('partials.footer')
-						@endif
-					</div>
-				</div>
+	<div class="wrapper {{$selectedPage==0 ? 'wrapper1' : 'wrapper2'}}">
+		<div class="layer"></div>
+		<div class="content">
+			<div class="header">
+				@include('partials.header')
 			</div>
 
-			<div class="spacer">
+			<div class="main">
+				@yield('content')
+			</div>
+
+			<div class="footer">
+				<div style="width: 740px; margin-left: auto; margin-right: auto;">
+					@if ($selectedPage==0) @include('partials.footer') @endif
+				</div>
 			</div>
 		</div>
 
-		<!-- Scripts -->
-		<script src="/js/vendor/modernizr-2.8.3.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="/js/vendor/lodash.js"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-		<script src="/js/plugins.js"></script>
-		<script src="/js/main.js"></script>
+		<div class="spacer">
+		</div>
+	</div>
 
-		@yield('javascript')
+	<!-- Scripts -->
+	<script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="/js/vendor/lodash.js"></script>
+	<script>
+		window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')
+	</script>
+	<script src="/js/plugins.js"></script>
+	<script src="/js/main.js"></script>
 
-		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-		<script>
-			/*
-			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-			e.src='https://www.google-analytics.com/analytics.js';
-			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-			ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-			  */
+	@yield('javascript')
 
-			$(document).ready(function()
-			 {
-				 console.log('master');
-				 var mainWrapper = $(".wrapper").first();
-				 var mainLayer = $(".layer").first();
-				 var mainContent = $(".content").first();
-				 function scaleBG(){
-					 var ws = $(window).width();
-					 var hs = $(window).height();
-					 var wi = 2048;
-					 var hi = 1313;
-					 var rs = ws/rs;
-					 var ri = wi/ri;
-					 var wnew = 0;
-					 var hnew = 0;
-					 if (rs>ri){
-						 wnew = wi * hs/hi;
-						 hnew = hs;
-					 }
-					 else{
-						 wnew = ws;
-						 hnew = hi * ws/wi;
-					 }
-					 mainWrapper.css('backgroundSize',wnew+"px "+hnew+"px");
-					 mainWrapper.css('backgroundPosition',((ws-wnew)/2)+"px "+((hs-hnew)/2)+"px");
-					 mainWrapper.width(ws);
-					 mainWrapper.height(hs);
-					 mainContent.width(ws);
-					 mainContent.height(hs);
-					 mainLayer.width(ws);
-					 mainLayer.height(hs);
-				 }
-				 scaleBG();
-				 $(window).resize(function(){
-					 scaleBG();
-				 })
-			 })
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<script>
+		function scaleBG() {
+			var mainWrapper = $(".wrapper").first();
+			var mainLayer = $(".layer").first();
+			var mainContent = $(".content").first();
+
+			var ws = $(window).width();
+			var hs = $(window).height();
+			var wi = 2048;
+			var hi = 1313;
+			var rs = ws / rs;
+			var ri = wi / ri;
+			var wnew = 0;
+			var hnew = 0;
+			if (rs > ri) {
+				wnew = wi * hs / hi;
+				hnew = hs;
+			} else {
+				wnew = ws;
+				hnew = hi * ws / wi;
+			}
+			mainWrapper.css('backgroundSize', wnew + "px " + hnew + "px");
+			mainWrapper.css('backgroundPosition', ((ws - wnew) / 2) + "px " + ((hs - hnew) / 2) + "px");
+			mainWrapper.width(ws);
+			mainWrapper.height(hs);
+			mainContent.width(ws);
+			mainContent.height(hs);
+			mainLayer.width(ws);
+			mainLayer.height(hs);
+		}
+
+		$(document).ready(function() {
+			$(window).resize(function() {
+				scaleBG();
+			})
+		})
 
 
-			window.fbAsyncInit = function() {
-				FB.init({
-					appId      : '1059827974029585',
-					xfbml      : true,
-					version    : 'v2.5'
-				});
-			};
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId: '1059827974029585',
+				xfbml: true,
+				version: 'v2.5'
+			});
 
-			(function(d, s, id){
+			FB.Canvas.setAutoGrow();
+
+			$(document).ready(function() {
+				window.setInterval(scaleBG, 1000);
+			});
+		};
+
+		(function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) {return;}
-			js = d.createElement(s); js.id = id;
+			if (d.getElementById(id)) {
+				return;
+			}
+			js = d.createElement(s);
+			js.id = id;
 			js.src = "//connect.facebook.net/en_US/sdk.js";
 			fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
+		}(document, 'script', 'facebook-jssdk'));
 
-			$(document).ready(function(){
-				setInterval(
-					function(){
-						FB.Canvas.setSize();
-					},
-					1000
-				);
-			});
-		</script>
-		<!-- /Scripts -->
+		$(document).ready(function() {
 
-	</body>
+		});
+	</script>
+	<!-- /Scripts -->
+
+</body>
+
 </html>
