@@ -13,7 +13,7 @@
 		</div>
 
 		<div style="position: absolute;top: 444px; left: 336px; width: 363px;">
-			Dacă ajungi printre primii 5 cei mai iubiți fotografi, vei intra automat în jurizare.<br><br> Juriul va analiza portofoliile și motivațiile participanților, apoi va alege un câștigător;
+			Dacă ajungi printre primii 5 cei mai iubiți fotografi, adică ai adunat cele mai multe fotografii din partea prietenilor, vei intra automat în jurizare.<br><br> Juriul va analiza portofoliile și motivațiile participanților, apoi va alege un câștigător;
 		</div>
 
 		<div style="position: absolute;top: 676px; left: 91px; width: 347px;">
