@@ -16,10 +16,10 @@
 	<link rel="stylesheet" href="/css/style.css"> @yield('css') @yield('fbTags')
 </head>
 
-<body>
+<body class="{{$selectedPage==0 ? 'wrapper1' : 'wrapper2'}}">
 	<div style="position: fixed; width: 100%; height: 100%; top:0; left: 0; background: rgba(0,0,0,0.6); z-index: 9998; display: none;" id="overlay"></div>
 
-	<div class="wrapper {{$selectedPage==0 ? 'wrapper1' : 'wrapper2'}}">
+	<div class="wrapper ">
 		<div class="layer"></div>
 		<div class="content">
 			<div class="header">
@@ -77,10 +77,10 @@
 				wnew = ws;
 				hnew = hi * ws / wi;
 			}
-			mainWrapper.css('backgroundSize', wnew + "px " + hnew + "px");
-			mainWrapper.css('backgroundPosition', ((ws - wnew) / 2) + "px " + ((hs - hnew) / 2) + "px");
-			mainWrapper.width(ws);
-			mainWrapper.height(hs);
+			// mainWrapper.css('backgroundSize', wnew + "px " + hnew + "px");
+			// mainWrapper.css('backgroundPosition', ((ws - wnew) / 2) + "px " + ((hs - hnew) / 2) + "px");
+			// mainWrapper.width(ws);
+			// mainWrapper.height(hs);
 			mainContent.width(ws);
 			mainContent.height(hs);
 			mainLayer.width(ws);
@@ -92,7 +92,6 @@
 				scaleBG();
 			})
 		})
-
 
 		window.fbAsyncInit = function() {
 			FB.init({
@@ -122,10 +121,6 @@
 			js.src = "//connect.facebook.net/en_US/sdk.js";
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
-
-		$(document).ready(function() {
-
-		});
 	</script>
 	<!-- /Scripts -->
 
