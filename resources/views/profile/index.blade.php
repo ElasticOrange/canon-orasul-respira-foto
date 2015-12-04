@@ -168,7 +168,7 @@
 @endsection
 
 @section('javascript')
-<script src="/js/vendor/lightbox.min.js"></script>
+<script src="/js/vendor/lightbox.js"></script>
 
 <script type="text/javascript">
     window.fbAsyncInit = function() {
