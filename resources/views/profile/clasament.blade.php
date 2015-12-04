@@ -21,7 +21,7 @@
 				</div>
 			</div>
 
-			<div style="width: 270px; height: 35px; float: left; text-align: left; font-size: 35px; line-height: 30px; font-weight: bold; padding-top: 30px;">
+			<div style="width: 270px; float: left; text-align: left; font-size: 35px; line-height: 30px; font-weight: bold; padding-top: 30px;">
 				{{$profile->user->name}}
 			</div>
 
