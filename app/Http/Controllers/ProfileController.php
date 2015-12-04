@@ -59,7 +59,7 @@ class ProfileController extends Controller
 				'votes' => $profile->votes()->where('isActive', '1')->get(),
 				'voted' => $voted,
 				'photos' => $photos,
-				'pageUrl' => URL::to('/profile/index/'.$profile->id),
+				'pageUrl' => 'https://apps.facebook.com/'.$_ENV['FACEBOOK_APP_ID'].'/profile/index/'.$profile->id,
 			);
 
 			return view('profile.index', $data);
