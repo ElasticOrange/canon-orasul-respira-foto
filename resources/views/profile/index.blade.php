@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('css')
-<link rel="stylesheet" href="/css/lightbox/css/lightbox.css">
+<link rel="stylesheet" href="/css/lightbox/css/lightbox.css?date=2015120401">
 @endsection
 
 @section('fbTags')
