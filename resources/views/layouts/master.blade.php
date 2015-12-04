@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="/css/bootstrap.css">
 	<link rel="stylesheet" href="/css/normalize.css">
 	<link rel="stylesheet" href="/css/main.css">
-	<link rel="stylesheet" href="/css/style.css?date=20151202"> @yield('css') @yield('fbTags')
+	<link rel="stylesheet" href="/css/style.css?date=20151204"> @yield('css') @yield('fbTags')
 </head>
 
 <body class="wrapper {{$selectedPage==0 ? 'wrapper1' : 'wrapper2'}}">
