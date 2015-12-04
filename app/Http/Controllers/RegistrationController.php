@@ -24,7 +24,7 @@ class RegistrationController extends Controller
 
         if ($profile->shortLink==""){
             $profile->user_id = Auth::id();
-            $profile->shortLink = shortenUrl( 'https://apps.facebook.com/'.$_ENV['FACEBOOK_APP_ID'].'/profile/index/'.$profile->id );
+            $profile->shortLink = shortenUrl( $_ENV['BASE_FB_URL'].'profile/index/'.$profile->id );
         }
 
         $profile->save();
@@ -92,7 +92,7 @@ class RegistrationController extends Controller
             'selectedPage' => 2,
             'profile' => Profile::where("user_id","=",Auth::id())->first(),
             'user' => Auth::user(),
-            'pageUrl' =>'https://apps.facebook.com/'.$_ENV['FACEBOOK_APP_ID'].'/profile/index/'.$profile->id,
+            'pageUrl' =>$_ENV['BASE_FB_URL'].'profile/index/'.$profile->id,
             'photos' => $photos
         );
         return view('register.preview',$data);

@@ -250,6 +250,9 @@ ul.pagination li a {
 	padding-right: 15px;
 	cursor: pointer;
 }
+a.white-button:hover{
+    color: #cf2026;
+}
 .red-button-border {
 	border: 1px solid #ffffff;
 }
