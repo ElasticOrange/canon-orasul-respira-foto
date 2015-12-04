@@ -171,7 +171,6 @@ ul.pagination li a {
 	color: #ffffff;
 	padding: 5px;
 	font-family: Kalinga, sans-serif;
-	border: 1px dashed #ffffff;
 }
 .register-description-border {
 	width: 710px;
@@ -181,6 +180,11 @@ ul.pagination li a {
 	opacity: 1;
 	background: none;
 }
+
+.dotted-border {
+	border: 1px dashed #ffffff;
+}
+
 .register-phone {
 	width: 370px;
 	margin-top: 20px;

@@ -61,7 +61,7 @@
 		<p class="normal-text" id="user-description">{{$profile->description}}</p>
 
 		<div class="register-description register-description-border" id="text-user-description" style="width: 680px; margin-left: 10px; display: none;">
-			<textarea class="register-description" style="width: 670px;" id="textarea-user-description">{{$profile->description}}</textarea>
+			<textarea class="register-description dotted-border" style="width: 670px;" id="textarea-user-description">{{$profile->description}}</textarea>
 		</div>
 
 		<p class="normal-text">Fotografiile mele </p>
