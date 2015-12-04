@@ -6,20 +6,7 @@
 		<p class="normal-text" style="line-height: 27px; font-size: 20px;">Cu sprijinul lor, echipamentul foto mult visat poate fi al tău. Invită-ti prietenii să te ajute și fotografiile lor se transformă în puncte pentru tine.</p>
 	</div>
 
-	<div class="popup_img popup_img1" id="popImg1"></div>
-	<div class="popup_img popup_img2" id="popImg2"></div>
-	<div class="popup_img popup_img3" id="popImg3"></div>
-	<div class="popup_img popup_img4" id="popImg4"></div>
-	<div class="popup_img popup_img5" id="popImg5"></div>
-	<div class="popup_img popup_img6" id="popImg6"></div>
-	<div class="popup_img popup_img7" id="popImg7"></div>
-	<div class="popup_img popup_img8" id="popImg8"></div>
-	<div class="popup_img popup_img9" id="popImg9"></div>
-	<div class="popup_img popup_img10" id="popImg10"></div>
-	<div class="popup_img popup_img11" id="popImg11"></div>
-	<div class="popup_img popup_img12" id="popImg12"></div>
-
-	<a href="/register" style="cursor: pointer">
+	<a href="/register" style="cursor: pointer" class="bulina_noua_container">
 		<div class="bulina_noua">
 			<img style="width: 400px" src="img/bulina_noua.png">
 		</div>
@@ -83,18 +70,18 @@
 				img.css('top',(hnew*origY/hi)+(hs-hnew)/2)
 			}
 
-			positionPopupImage('popImg1',230,578);
-			positionPopupImage('popImg2',551,630);
-			positionPopupImage('popImg3',1444,630);
-			positionPopupImage('popImg4',634,883);
-			positionPopupImage('popImg5',578,1036);
-			positionPopupImage('popImg6',1613,736);
-			positionPopupImage('popImg7',1761,988);
-			positionPopupImage('popImg8',1408,1023);
-			positionPopupImage('popImg9',1365,866);
-			positionPopupImage('popImg10',345,958);
-			positionPopupImage('popImg11',488,985);
-			positionPopupImage('popImg12',298,1098);
+			positionPopupImage('popImg1',230,378);
+			positionPopupImage('popImg2',551,430);
+			positionPopupImage('popImg3',1444,430);
+			positionPopupImage('popImg4',634,683);
+			positionPopupImage('popImg5',578,836);
+			positionPopupImage('popImg6',1613,536);
+			positionPopupImage('popImg7',1761,788);
+			positionPopupImage('popImg8',1408,823);
+			positionPopupImage('popImg9',1365,666);
+			positionPopupImage('popImg10',345,758);
+			positionPopupImage('popImg11',488,785);
+			positionPopupImage('popImg12',298,898);
 
 			$("#popImg1").pulseSize(_.random(timeMin, timeMax), 50, 47, 0.2);
 			$("#popImg2").pulseSize(_.random(timeMin, timeMax), 15, 15, 0.2);

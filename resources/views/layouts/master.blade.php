@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="">
 
 <head>
 	<meta charset="utf-8">
@@ -11,36 +11,42 @@
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<!-- Place favicon.ico in the root directory -->
 
+	<link rel="stylesheet" href="/css/bootstrap.css">
 	<link rel="stylesheet" href="/css/normalize.css">
 	<link rel="stylesheet" href="/css/main.css">
 	<link rel="stylesheet" href="/css/style.css?date=20151202"> @yield('css') @yield('fbTags')
 </head>
 
-<body class="{{$selectedPage==0 ? 'wrapper1' : 'wrapper2'}}">
-	<div style="position: fixed; width: 100%; height: 100%; top:0; left: 0; background: rgba(0,0,0,0.6); z-index: 9998; display: none;" id="overlay"></div>
+<body class="wrapper {{$selectedPage==0 ? 'wrapper1' : 'wrapper2'}}">
+	@include('partials.header')
 
-	<div class="wrapper ">
-		<div class="layer"></div>
-		<div class="content">
-			<div class="header">
-				@include('partials.header')
-			</div>
+	@if ($selectedPage == 0)
+		<div class="popup_img_container">
+			<div class="popup_img popup_img1" id="popImg1"></div>
+			<div class="popup_img popup_img2" id="popImg2"></div>
+			<div class="popup_img popup_img3" id="popImg3"></div>
+			<div class="popup_img popup_img4" id="popImg4"></div>
+			<div class="popup_img popup_img5" id="popImg5"></div>
+			<div class="popup_img popup_img6" id="popImg6"></div>
+			<div class="popup_img popup_img7" id="popImg7"></div>
+			<div class="popup_img popup_img8" id="popImg8"></div>
+			<div class="popup_img popup_img9" id="popImg9"></div>
+			<div class="popup_img popup_img10" id="popImg10"></div>
+			<div class="popup_img popup_img11" id="popImg11"></div>
+			<div class="popup_img popup_img12" id="popImg12"></div>
+		</div>
+	@endif
 
-			<div class="main">
-				@yield('content')
-			</div>
+	<div class="container">
+		@yield('content')
 
-			@if ($selectedPage==0)
-				<div class="footer">
-					<div style="width: 740px; margin-left: auto; margin-right: auto;">
-						 @include('partials.footer')
-					</div>
+		@if ($selectedPage==0)
+			<div class="footer">
+				<div style="width: 740px; margin-left: auto; margin-right: auto;">
+					 @include('partials.footer')
 				</div>
-			@endif
-		</div>
-
-		<div class="spacer">
-		</div>
+			</div>
+		@endif
 	</div>
 
 	<!-- Scripts -->
@@ -57,42 +63,6 @@
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 	<script>
-		function scaleBG() {
-			var mainWrapper = $(".wrapper").first();
-			var mainLayer = $(".layer").first();
-			var mainContent = $(".content").first();
-
-			var ws = $(window).width();
-			var hs = $(window).height();
-			var wi = 2048;
-			var hi = 1313;
-			var rs = ws / rs;
-			var ri = wi / ri;
-			var wnew = 0;
-			var hnew = 0;
-			if (rs > ri) {
-				wnew = wi * hs / hi;
-				hnew = hs;
-			} else {
-				wnew = ws;
-				hnew = hi * ws / wi;
-			}
-			// mainWrapper.css('backgroundSize', wnew + "px " + hnew + "px");
-			// mainWrapper.css('backgroundPosition', ((ws - wnew) / 2) + "px " + ((hs - hnew) / 2) + "px");
-			// mainWrapper.width(ws);
-			// mainWrapper.height(hs);
-			mainContent.width(ws);
-			mainContent.height(hs);
-			mainLayer.width(ws);
-			mainLayer.height(hs);
-		}
-
-		$(document).ready(function() {
-			$(window).resize(function() {
-				scaleBG();
-			})
-		})
-
 		window.fbAsyncInit = function() {
 			FB.init({
 				appId      : '1059827974029585',
@@ -104,7 +74,7 @@
 
 			setTimeout(
 				function() {
-					scaleBG();
+					//scaleBG();
 				},
 				200
 			);

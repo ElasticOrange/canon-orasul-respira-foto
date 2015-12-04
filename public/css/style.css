@@ -5,6 +5,15 @@
 * {
 	color: #ffffff;
 }
+
+a {
+	color: #fff;
+}
+
+a:hover {
+	color: #fff;
+}
+
 body {
 	font-family: Ghotic, sans-serif;
 }
@@ -14,9 +23,9 @@ p {
 }
 .wrapper {
 	width: 100%;
-	height: 634px;
 	background-repeat: no-repeat;
 	overflow: hidden;
+	position: relative;
 }
 
 .wrapper1 {
@@ -38,13 +47,11 @@ p {
 .layer {
 	position: absolute;
 	width: 100%;
-	height: 634px;
 	background-color: black;
 	opacity: 0.6;
 }
 .content {
 	width: 100%;
-	height: 634px;
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -252,12 +259,21 @@ ul.pagination li a {
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
+	font-size: 16px;
 }
+
+.popup_img_container {
+	position: absolute;
+	z-index: 2;
+	top: 100px;
+}
+
 .popup_img {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	position: fixed;
+	position: absolute;
+	z-index: 2;
 }
 .popup_img1 {
 	width: 27px;
@@ -324,7 +340,6 @@ ul.pagination li a {
 
 .header {
 	width: 740px;
-	/*background-color: wheat;*/
 	margin-top: 30px;
 	margin-left: auto;
 	margin-right: auto;
@@ -395,9 +410,6 @@ ul.pagination li a {
 /*index.blade.php*/
 
 .motto {
-	position: absolute;
-	left: 0;
-	right: 0;
 	margin: auto;
 	top: 126px;
 	font-size: 30px;
@@ -419,11 +431,22 @@ ul.pagination li a {
 	border-radius: 50%;
 	background-color: #d00000;
 }
+
+.container {
+	z-index: 10;
+	position: relative;
+}
+
+.bulina_noua_container {
+	z-index: 2;
+	position: relative;
+}
+
 .bulina_noua {
 	width: 435px;
-	position: absolute;
-	top: 252px;
-	left: 160px;
+	position: relative;
+	top: 0px;
+	left: 80px;
 	right: 0;
 	margin: auto;
 }
