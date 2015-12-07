@@ -251,7 +251,7 @@ ul.pagination li a {
 	cursor: pointer;
 }
 a.white-button:hover{
-    color: #cf2026;
+	color: #cf2026;
 }
 .red-button-border {
 	border: 1px solid #ffffff;
@@ -394,11 +394,11 @@ a.white-button:hover{
 /*Footer*/
 
 .footer {
-	width: 100%;
+	width: 740px;
 	height: 116px;
-	position: absolute;
+	position: relative;
 	bottom: 0px;
-	top: 510px;
+	margin: auto;
 }
 .logo {
 	height: 116px;
@@ -410,6 +410,13 @@ a.white-button:hover{
 }
 .spacer {
 	height: 150px;
+}
+.regulament {
+	top: 100px;
+	position: relative;
+	font-size: 20px;
+	text-decoration: underline;
+	text-shadow: 2px 2px 3px #000;
 }
 
 /*/Footer*/
