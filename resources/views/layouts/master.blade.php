@@ -43,7 +43,7 @@
 		@if ($selectedPage==0)
 			<div class="footer">
 				<div class="regulament">
-					<a href="/pdf/Regulament.pdf">Regulament</a>
+					<a href="/pdf/Regulament.pdf" target="_blank">Regulament</a>
 				</div>
 				<div style="width: 740px; margin-left: auto; margin-right: auto;">
 					 @include('partials.footer')
