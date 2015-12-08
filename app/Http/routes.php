@@ -11,14 +11,15 @@
 |
 */
 
-Route::group(['middleware' => 'auth'], function()
-{
-    Route::controller('/register','RegistrationController');
+Route::group(['middleware' => 'auth'], function () {
+    Route::controller('/register', 'RegistrationController');
 
 });
 
-Route::controller('/profile','ProfileController');
-Route::controller('/facebook','FacebookController');
+Route::controller('admin', 'AdminController');
+
+Route::controller('/profile', 'ProfileController');
+Route::controller('/facebook', 'FacebookController');
 Route::controller('/upload-image', 'UploadImageController');
 Route::controller('/cum-functioneaza', 'HowItWorksController');
 Route::controller('/', 'HomeController');
