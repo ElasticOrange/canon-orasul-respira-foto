@@ -16,6 +16,11 @@ class Admin extends Model
     public static function login($email, $password)
     {
         $admin = self::where('email', $email)->first();
+
+        if (!$admin) {
+            return false;
+        }
+
         if (Hash::check($password, $admin->password)) {
             Session::put('admin_logged', true);
             return true;
