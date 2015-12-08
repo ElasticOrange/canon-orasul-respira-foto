@@ -9,7 +9,7 @@
         <meta name="author" content="">
         <link rel="icon" href="/favicon.ico">
 
-        <title>Starter Template for Bootstrap</title>
+        <title>Canon Pay with Photo - Admin panel</title>
 
         <!-- Bootstrap core CSS -->
         <link href="{{ asset('/admin/css/bootstrap.min.css') }}" rel="stylesheet" />
