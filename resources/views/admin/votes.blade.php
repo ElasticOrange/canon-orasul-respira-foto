@@ -24,7 +24,7 @@
                     <tr>
                         <td>
                             @if ($vote->photo)
-                                <img src="{{generatePhotoURL('thumb_132',$vote->photo, true)}}" />
+                                <img src="{{ generatePhotoURL('thumb_132', $vote->photo, true) }}" />
                             @endif
                         </td>
                         <td>
