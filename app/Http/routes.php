@@ -16,7 +16,9 @@ Route::group(['middleware' => 'auth'], function () {
 
 });
 
+// Route::group(function () {
 Route::controller('/admin', 'AdminController');
+// });
 
 Route::controller('/profile', 'ProfileController');
 Route::controller('/facebook', 'FacebookController');

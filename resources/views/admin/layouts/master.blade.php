@@ -22,9 +22,9 @@
         <div class="container">
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="{{ action('AdminController@getIndex') }}">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class="active"><a href="/admin/index">Home</a></li>
+                    <li><a href="/admin/votes">Voturi</a></li>
+                    <li><a href="/admin/logout">Logout</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>

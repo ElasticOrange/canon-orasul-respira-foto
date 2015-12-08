@@ -1,391 +1,391 @@
 @font-face {
-	font-family: Ghotic;
-	src: url(fonts/GOTHIC.TTF);
+    font-family: Ghotic;
+    src: url(fonts/GOTHIC.TTF);
 }
 * {
-	color: #ffffff;
+    color: #ffffff;
 }
 
 a {
-	color: #fff;
+    color: #fff;
 }
 
 a:hover {
-	color: #fff;
+    color: #fff;
 }
 
 body {
-	font-family: Ghotic, sans-serif;
+    font-family: Ghotic, sans-serif;
 }
 p {
-	margin-top: 0;
-	margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .wrapper {
-	width: 100%;
-	background-repeat: no-repeat;
-	overflow: hidden;
-	position: relative;
+    width: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
 }
 
 .wrapper1 {
-	background: url(/img/background.png) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+    background: url(/img/background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .wrapper2 {
-	background: url(/img/background-blurred.png) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+    background: url(/img/background-blurred.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .layer {
-	position: absolute;
-	width: 100%;
-	background-color: black;
-	opacity: 0.6;
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    opacity: 0.6;
 }
 .content {
-	width: 100%;
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin: auto;
-	overflow: auto;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: auto;
 }
 .content-wrapper {
-	width: 740px;
-	margin-top: 20px;
-	margin-left: auto;
-	margin-right: auto;
+    width: 740px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*Pagination*/
 
 ul.pagination {
-	display: inline-block;
-	list-style-type: none;
-	margin-left: auto;
-	margin-right: auto;
+    display: inline-block;
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
 }
 ul.pagination li {
-	display: inline-block;
-	width: 20px;
-	text-align: center;
-	line-height: 20px;
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+    line-height: 20px;
 }
 ul.pagination li a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 /*Register*/
 
 .wide-thumbnail {
-	width: 180px;
-	height: 135px;
-	position: relative;
-	text-align: center;
-	line-height: 135px;
-	float: left;
-	margin: 15px;
+    width: 180px;
+    height: 136px;
+    position: relative;
+    text-align: center;
+    line-height: 135px;
+    float: left;
+    margin: 15px;
 }
 .vote-gallery {
-	width: 132px;
-	height: 99px;
-	line-height: 99px;
-	margin: 2px;
+    width: 132px;
+    height: 99px;
+    line-height: 99px;
+    margin: 2px;
 }
 .gallery-zoom {
-	width: 100%;
-	height: 100%;
-	display: none;
-	background-color: rgba(208, 0, 0, 0.3);
-	position: absolute;
-	top: 0;
-	left: 0;
-	margin: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(208, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0px;
 }
 .wide-thumbnail:hover .gallery-zoom {
-	display: block;
+    display: block;
 }
 .vote-overlay {
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.3);
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
 }
 .container-dotted-border:hover .vote-overlay {
-	display: block;
+    display: block;
 }
 .photo-border {
-	border: 1px dashed #ffffff;
-	padding: 0px;
-	width: 78px;
-	height: 78px;
-	border-radius: 4px;
+    border: 1px dashed #ffffff;
+    padding: 0px;
+    width: 78px;
+    height: 78px;
+    border-radius: 4px;
 }
 .headline {
-	font-size: 30px;
-	line-height: 40px;
-	text-align: center;
-	padding-top: 38px;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    padding-top: 38px;
 }
 .big-text {
-	font-size: 20px;
-	text-align: center;
-	padding-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
 }
 .normal-text {
-	font-size: 16px;
-	text-align: center;
-	padding-top: 20px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 20px;
 }
 .register-add-photo {
-	margin-left: 15px;
-	margin-right: 15px;
-	position: relative;
-	cursor: pointer;
+    margin-left: 15px;
+    margin-right: 15px;
+    position: relative;
+    cursor: pointer;
 }
 .register-remove-photo {
-	z-index: 9999;
-	position: absolute;
-	top: -37px;
-	right: -7px;
-	cursor: pointer;
+    z-index: 9999;
+    position: absolute;
+    top: -37px;
+    right: -7px;
+    cursor: pointer;
 }
 .register-description {
-	width: 700px;
-	height: 170px;
-	margin-left: auto;
-	margin-right: auto;
-	border: none;
-	background-color: rgba(0, 0, 0, 0.2);
-	color: #ffffff;
-	padding: 5px;
-	font-family: Kalinga, sans-serif;
+    width: 700px;
+    height: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    padding: 5px;
+    font-family: Kalinga, sans-serif;
 }
 .register-description-border {
-	width: 710px;
-	height: 180px;
-	margin-top: 20px;
-	padding: 0px;
-	opacity: 1;
-	background: none;
+    width: 710px;
+    height: 180px;
+    margin-top: 20px;
+    padding: 0px;
+    opacity: 1;
+    background: none;
 }
 
 .dotted-border {
-	border: 1px dashed #ffffff;
+    border: 1px dashed #ffffff;
 }
 
 .register-phone {
-	width: 370px;
-	margin-top: 20px;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 5px;
-	font-size: 30px;
-	background: none;
-	border: 1px dashed #ffffff;
-	text-align: center;
-	font-weight: bold;
-	font-family: Kalinga, sans-serif;
+    width: 370px;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    font-size: 30px;
+    background: none;
+    border: 1px dashed #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-family: Kalinga, sans-serif;
 }
 .container-dotted-border {
-	width: 700px;
-	display: block;
-	background-color: rgba(0, 0, 0, 0.2);
-	border: 1px dashed #ffffff;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	margin-top: 75px;
-	margin-bottom: 50px;
-	text-align: center;
+    width: 700px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px dashed #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 75px;
+    margin-bottom: 50px;
+    text-align: center;
 }
 .user-red-circle {
-	position: absolute;
-	width: 110px;
-	height: 110px;
-	border-radius: 55px;
-	left: 295px;
-	top: -55px;
-	display: block;
-	background-color: #d00000
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 55px;
+    left: 295px;
+    top: -55px;
+    display: block;
+    background-color: #d00000
 }
 .user-photo {
-	width: 100px;
-	height: 100px;
-	position: absolute;
-	top: -50px;
-	left: 300px;
-	border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    left: 300px;
+    border-radius: 50px;
 }
 .red-button {
-	background-color: #d00000;
-	border-radius: 3px;
-	text-decoration: none;
-	padding: 5px;
-	padding-left: 10px;
-	padding-right: 10px;
-	cursor: pointer;
+    background-color: #d00000;
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
 }
 .white-button {
-	background-color: #ffffff;
-	color: #cf2026;
-	border-radius: 3px;
-	text-decoration: none;
-	font-weight: bold;
-	padding-bottom: 5px;
-	padding-top: 8px;
-	padding-left: 15px;
-	padding-right: 15px;
-	cursor: pointer;
+    background-color: #ffffff;
+    color: #cf2026;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-top: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
 }
 a.white-button:hover{
-	color: #cf2026;
+    color: #cf2026;
 }
 .red-button-border {
-	border: 1px solid #ffffff;
+    border: 1px solid #ffffff;
 }
 .how-it-works {
-	width: 615px;
-	height: 774px;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-image: url('/img/how-it-works.png');
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	font-size: 16px;
+    width: 615px;
+    height: 774px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/img/how-it-works.png');
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    font-size: 16px;
 }
 
 .popup_img_container {
-	position: absolute;
-	z-index: 2;
-	top: 100px;
+    position: absolute;
+    z-index: 2;
+    top: 100px;
 }
 
 .popup_img {
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	position: absolute;
-	z-index: 2;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 2;
 }
 .popup_img1 {
-	width: 27px;
-	height: 25px;
-	background-image: url('/img/popups/img1.png');
+    width: 27px;
+    height: 25px;
+    background-image: url('/img/popups/img1.png');
 }
 .popup_img2 {
-	width: 27px;
-	height: 27px;
-	background-image: url('/img/popups/img2.png');
+    width: 27px;
+    height: 27px;
+    background-image: url('/img/popups/img2.png');
 }
 .popup_img3 {
-	width: 26px;
-	height: 27px;
-	background-image: url('/img/popups/img3.png');
+    width: 26px;
+    height: 27px;
+    background-image: url('/img/popups/img3.png');
 }
 .popup_img4 {
-	width: 14px;
-	height: 13px;
-	background-image: url('/img/popups/img4.png');
+    width: 14px;
+    height: 13px;
+    background-image: url('/img/popups/img4.png');
 }
 .popup_img5 {
-	width: 26px;
-	height: 26px;
-	background-image: url('/img/popups/img5.png');
+    width: 26px;
+    height: 26px;
+    background-image: url('/img/popups/img5.png');
 }
 .popup_img6 {
-	width: 43px;
-	height: 52px;
-	background-image: url('/img/popups/img6.png');
+    width: 43px;
+    height: 52px;
+    background-image: url('/img/popups/img6.png');
 }
 .popup_img7 {
-	width: 26px;
-	height: 26px;
-	background-image: url('/img/popups/img7.png');
+    width: 26px;
+    height: 26px;
+    background-image: url('/img/popups/img7.png');
 }
 .popup_img8 {
-	width: 25px;
-	height: 18px;
-	background-image: url('/img/popups/img8.png');
+    width: 25px;
+    height: 18px;
+    background-image: url('/img/popups/img8.png');
 }
 .popup_img9 {
-	width: 26px;
-	height: 27px;
-	background-image: url('/img/popups/img9.png');
+    width: 26px;
+    height: 27px;
+    background-image: url('/img/popups/img9.png');
 }
 .popup_img10 {
-	width: 14px;
-	height: 14px;
-	background-image: url('/img/popups/img10.png');
+    width: 14px;
+    height: 14px;
+    background-image: url('/img/popups/img10.png');
 }
 .popup_img11 {
-	width: 13px;
-	height: 13px;
-	background-image: url('/img/popups/img11.png');
+    width: 13px;
+    height: 13px;
+    background-image: url('/img/popups/img11.png');
 }
 .popup_img12 {
-	width: 27px;
-	height: 25px;
-	background-image: url('/img/popups/img12.png');
+    width: 27px;
+    height: 25px;
+    background-image: url('/img/popups/img12.png');
 }
 
 /*Header*/
 
 .header {
-	width: 740px;
-	margin-top: 30px;
-	margin-left: auto;
-	margin-right: auto;
+    width: 740px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .header nav {
-	height: 38px;
-	width: 740px;
+    height: 38px;
+    width: 740px;
 }
 .header ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	height: 38px;
-	width: 740px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 38px;
+    width: 740px;
 }
 .header ul li {
-	display: inline;
-	float: left;
-	height: 38px;
-	width: 185px;
-	text-align: center;
+    display: inline;
+    float: left;
+    height: 38px;
+    width: 185px;
+    text-align: center;
 }
 .header ul li a {
-	text-decoration: none;
-	display: block;
-	height: 38px;
-	line-height: 38px;
-	font-size: 16px;
+    text-decoration: none;
+    display: block;
+    height: 38px;
+    line-height: 38px;
+    font-size: 16px;
 }
 .header ul li:hover {
-	/*background-color: red;
-	background-color: #d00000;
-	border-radius: 3px;*/
-	text-decoration: underline;
+    /*background-color: red;
+    background-color: #d00000;
+    border-radius: 3px;*/
+    text-decoration: underline;
 }
 .active {
-	background-color: #d00000;
-	border-radius: 3px;
-	text-decoration: none;
+    background-color: #d00000;
+    border-radius: 3px;
+    text-decoration: none;
 }
 
 /*/Header*/
@@ -394,29 +394,29 @@ a.white-button:hover{
 /*Footer*/
 
 .footer {
-	width: 740px;
-	height: 116px;
-	position: relative;
-	bottom: 0px;
-	margin: auto;
+    width: 740px;
+    height: 116px;
+    position: relative;
+    bottom: 0px;
+    margin: auto;
 }
 .logo {
-	height: 116px;
-	float: right;
+    height: 116px;
+    float: right;
 }
 .logo img {
-	width: 170px;
-	height: 116px;
+    width: 170px;
+    height: 116px;
 }
 .spacer {
-	height: 150px;
+    height: 150px;
 }
 .regulament {
-	top: 100px;
-	position: relative;
-	font-size: 20px;
-	text-decoration: underline;
-	text-shadow: 2px 2px 3px #000;
+    top: 100px;
+    position: relative;
+    font-size: 20px;
+    text-decoration: underline;
+    text-shadow: 2px 2px 3px #000;
 }
 
 /*/Footer*/
@@ -425,77 +425,77 @@ a.white-button:hover{
 /*index.blade.php*/
 
 .motto {
-	margin: auto;
-	top: 126px;
-	font-size: 30px;
-	font-weight: 400;
-	text-align: center;
-	width: 740px;
+    margin: auto;
+    top: 126px;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    width: 740px;
 }
 .motto p {
-	line-height: 40px;
+    line-height: 40px;
 }
 .circle {
-	width: 293px;
-	height: 293px;
-	position: absolute;
-	top: 252px;
-	left: 0;
-	right: 0;
-	margin: auto;
-	border-radius: 50%;
-	background-color: #d00000;
+    width: 293px;
+    height: 293px;
+    position: absolute;
+    top: 252px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #d00000;
 }
 
 .container {
-	z-index: 10;
-	position: relative;
+    z-index: 10;
+    position: relative;
 }
 
 .bulina_noua_container {
-	z-index: 2;
-	position: relative;
+    z-index: 2;
+    position: relative;
 }
 
 .bulina_noua {
-	width: 435px;
-	position: relative;
-	top: 0px;
-	left: 80px;
-	right: 0;
-	margin: auto;
+    width: 435px;
+    position: relative;
+    top: 0px;
+    left: 80px;
+    right: 0;
+    margin: auto;
 }
 .camera {
-	width: 126px;
-	height: 112px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 46px;
+    width: 126px;
+    height: 112px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 46px;
 }
 .camera img {
-	width: 126px;
-	height: 112px;
+    width: 126px;
+    height: 112px;
 }
 .fiveD {
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 10px;
-	text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: center;
 }
 .fiveD p {
-	font-size: 17px;
+    font-size: 17px;
 }
 .fiveD span {
-	font-weight: 700;
+    font-weight: 700;
 }
 .rules {
-	position: absolute;
-	bottom: 30px;
-	left: 0;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
 }
 .rules a {
-	font-size: 20px;
-	text-decoration: none;
+    font-size: 20px;
+    text-decoration: none;
 }
 
 /*/index.blade.php*/
@@ -504,82 +504,82 @@ a.white-button:hover{
 /*images.blade.php*/
 
 .imagesTitle {
-	position: absolute;
-	top: 126px;
-	left: 0;
-	right: 0;
-	margin: auto;
-	text-align: center;
-	font-size: 42px;
+    position: absolute;
+    top: 126px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-size: 42px;
 }
 .imagesDesc {
-	width: 688px;
-	position: absolute;
-	top: 200px;
-	left: 0;
-	right: 0;
-	margin: auto;
-	text-align: center;
-	font-size: 16px;
+    width: 688px;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-size: 16px;
 }
 .imagesPics {
-	height: 80px;
-	position: absolute;
-	top: 300px;
-	left: 0;
-	right: 0;
-	margin: auto;
-	text-align: center;
+    height: 80px;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
 }
 .imagesPic {
-	width: 78px;
-	height: 78px;
-	border: 1px solid #ffffff;
-	border-style: dashed;
-	border-radius: 3px;
-	background-image: url('/img/add-image.png');
-	background-position: center;
-	/*background-size: cover;*/
-	background-repeat: no-repeat;
-	display: inline-block;
-	margin-left: 5px;
-	margin-right: 5px;
-	position: relative;
+    width: 78px;
+    height: 78px;
+    border: 1px solid #ffffff;
+    border-style: dashed;
+    border-radius: 3px;
+    background-image: url('/img/add-image.png');
+    background-position: center;
+    /*background-size: cover;*/
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
 }
 .imagesPic div {
-	width: 20px;
-	height: 20px;
-	position: absolute;
-	top: -8px;
-	right: -8px;
-	background-color: #ffffff;
-	border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ffffff;
+    border-radius: 50%;
 }
 .imagesPic div img {
-	width: 11px;
-	height: 11px;
-	margin-bottom: 4px;
+    width: 11px;
+    height: 11px;
+    margin-bottom: 4px;
 }
 .preSignUp {
-	position: absolute;
-	top: 405px;
-	left: 0;
-	right: 0;
-	margin: auto;
-	text-decoration: none;
-	border: 1px solid #ffffff;
-	border-radius: 2px;
-	width: 265px;
-	height: 35px;
+    position: absolute;
+    top: 405px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    width: 265px;
+    height: 35px;
 }
 .preSignUp div {
-	width: 265px;
-	height: 35px;
-	text-align: center;
-	background-color: #d00000;
+    width: 265px;
+    height: 35px;
+    text-align: center;
+    background-color: #d00000;
 }
 .preSignUp div p {
-	padding-top: 6px;
+    padding-top: 6px;
 }
 
 /*/images.blade.php*/
