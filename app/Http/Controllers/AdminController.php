@@ -16,7 +16,7 @@ class AdminController extends Controller
 
     public function getIndex()
     {
-        $profiles = Profile::where('checked', 0)->get();
+        $profiles = Profile::where('checked', 0)->where('isActive', 1)->get();
 
         return view('admin/index', ['profiles' => $profiles]);
     }
@@ -45,7 +45,7 @@ class AdminController extends Controller
 
     public function getVotes()
     {
-        $votes = Vote::where('checked', 0)->get();
+        $votes = Vote::where('checked', 0)->where('isActive', 1)->get();
 
         return view('admin/votes', ['votes' => $votes]);
     }
