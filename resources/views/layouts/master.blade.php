@@ -84,7 +84,7 @@
                 cookie : true
             });
 
-            FB.Canvas.setAutoGrow();
+            FB.Canvas.setSize();
 
             setTimeout(
                 function() {
