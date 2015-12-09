@@ -31,7 +31,7 @@
 			</div>
 
 			<div style="width: 270px; height: 55px; margin-top: 10px; float: left; text-align: left;">
-				@foreach ($profile->votes()->where('isActive', 1)->limit(18)->get() as $userVote)
+				@foreach ($profile->votes()->where('isActive', 1)->orderByRaw('RAND()')->limit(18)->get() as $userVote)
 					<img style="width: 26px; height: 26px; border-radius: 13px;" src="/images/profilePhotos/thumb_50_{{md5($userVote->user->id)}}.jpg">
 				@endforeach
 			</div>
