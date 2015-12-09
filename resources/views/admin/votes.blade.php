@@ -14,6 +14,9 @@
             <table class="table table-striped table-hover">
                 <tr>
                     <th>
+                        Nume
+                    </th>
+                    <th>
                         <span class="glyphicon glyphicon-glyphicon glyphicon-picture" aria-hidden="true"></span>
                     </th>
                     <th class="col-md-3">
@@ -22,6 +25,9 @@
                 </tr>
                 @foreach($votes as $vote)
                     <tr>
+                        <td>
+                            {{ $vote->user->name }}
+                        </td>
                         <td>
                             @if ($vote->photo)
                                 <img src="{{ generatePhotoURL('thumb_132', $vote->photo, true) }}" />
