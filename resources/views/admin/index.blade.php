@@ -14,6 +14,9 @@
             <table class="table table-striped table-hover">
                 <tr>
                     <th>
+                        Nume
+                    </th>
+                    <th>
                         Descriere
                     </th>
                     <th>
@@ -25,6 +28,9 @@
                 </tr>
                 @foreach($profiles as $profile)
                     <tr>
+                        <td>
+                            {{ $profile->user->name }}
+                        </td>
                         <td>
                             {{ $profile->description }}
                         </td>
