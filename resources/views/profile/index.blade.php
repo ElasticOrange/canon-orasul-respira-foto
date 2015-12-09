@@ -193,7 +193,7 @@
 
         $('#login-fb-js').click(function(){
             FB.login(function(response) {
-                window.location.replace("/facebook/js-callback");
+                //window.location.replace("/facebook/js-callback");
             }, {scope: 'email'});
         });
 
