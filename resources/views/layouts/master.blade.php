@@ -80,7 +80,8 @@
             FB.init({
                 appId      : '1059827974029585',
                 xfbml      : true,
-                version    : 'v2.4'
+                version    : 'v2.4',
+                cookie : true
             });
 
             FB.Canvas.setAutoGrow();

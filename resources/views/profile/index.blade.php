@@ -124,7 +124,7 @@
                     </div>
                 @else
                     <div style="margin-top: 12px; margin-bottom: 30px; margin-top: 30px; width: 100%; text-align: center;">
-                        <a class="red-button red-button-border" style="line-height: 30px;" href="{{$fbLink}}" id="login-fb-js"><img src="/img/fb-logo.png" height="30px"> Login with Facebook </a>
+                        <a class="red-button red-button-border" style="line-height: 30px;"  id="login-fb-js"><img src="/img/fb-logo.png" height="30px"> Login with Facebook </a>
                     </div>
                 @endif
             @else
@@ -171,11 +171,13 @@
 <script src="/js/vendor/lightbox.min.js"></script>
 
 <script type="text/javascript">
+    /*
     window.fbAsyncInit = function() {
         FB.init({
             appId      : '1059827974029585',
             xfbml      : true,
-            version    : 'v2.4'
+            version    : 'v2.4',
+            cookie : true
         });
     };
 
@@ -186,14 +188,14 @@
         js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-
+      */
     $(document).ready(function()
     {
         var addedPhoto=false;
 
         $('#login-fb-js').click(function(){
             FB.login(function(response) {
-                //window.location.replace("/facebook/js-callback");
+                window.location.replace("/facebook/js-callback");
             }, {scope: 'email'});
         });
 
