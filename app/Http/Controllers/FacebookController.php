@@ -127,20 +127,7 @@ class FacebookController extends Controller
         // Access token will be null if the user denied the request
         // or if someone just hit this URL outside of the OAuth flow.
         if (! $token) {
-            // Get the redirect helper
-            $helper = $fb->getRedirectLoginHelper();
-
-            if (! $helper->getError()) {
-                abort(403, 'Unauthorized action.');
-            }
-
-            // User denied the request
-            dd(
-                $helper->getError(),
-                $helper->getErrorCode(),
-                $helper->getErrorReason(),
-                $helper->getErrorDescription()
-            );
+           return redirect($fb->getLoginUrl(['email']));
         }
 
         if (! $token->isLongLived()) {
