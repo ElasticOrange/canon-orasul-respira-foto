@@ -195,7 +195,12 @@
 
         $('#login-fb-js').click(function(){
             FB.login(function(response) {
-                window.location.replace("/facebook/js-callback");
+                if (response.authResponse) {
+                    var access_token = response.authResponse.accessToken;
+                    window.location.replace("/facebook/js-callback/"+access_token);
+                } else {
+                    console.log('User cancelled login or did not fully authorize.');
+                }
             }, {scope: 'email'});
         });
 
@@ -216,7 +221,6 @@
         });
 
         $(".register-remove-photo").click(function(e){
-
             $.post( "/upload-image/remove-vote", { profileId: "{{$profile->id}}" }, function( data ) {
                 if(data.message=="removed"){
                     $("#removePhotoVote").hide();

@@ -113,7 +113,7 @@ class FacebookController extends Controller
 		}
 	}
 
-    public function getJsCallback()
+    public function getJsCallback($auxToken)
     {
         $fb = App::make('SammyK\LaravelFacebookSdk\LaravelFacebookSdk');
         // Obtain an access token.
@@ -126,20 +126,9 @@ class FacebookController extends Controller
 
         // Access token will be null if the user denied the request
         // or if someone just hit this URL outside of the OAuth flow.
-        if (! $token) {
-           return redirect($fb->getLoginUrl(['email']));
-        }
-
-        if (! $token->isLongLived()) {
-            // OAuth 2.0 client handler
-            $oauth_client = $fb->getOAuth2Client();
-
-            // Extend the access token.
-            try {
-                $token = $oauth_client->getLongLivedAccessToken($token);
-            } catch (Facebook\Exceptions\FacebookSDKException $e) {
-                dd($e->getMessage());
-            }
+        if ( !$token ) {
+            $token=$auxToken;
+           //return redirect( $fb->getLoginUrl(['email']) );
         }
 
         $fb->setDefaultAccessToken($token);
