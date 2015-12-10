@@ -90,7 +90,7 @@
                 function() {
                     FB.Canvas.setAutoGrow();
                 },
-                200
+                500
             );
 
         };
