@@ -75,7 +75,7 @@ ul.pagination {
 }
 ul.pagination li {
     display: inline-block;
-    width: 20px;
+/*    width: 20px;*/
     text-align: center;
     line-height: 20px;
 }
