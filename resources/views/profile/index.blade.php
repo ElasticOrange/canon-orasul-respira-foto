@@ -299,12 +299,8 @@
             });
         });
 
-        $(window).scroll(function(){
-            var window_size = $(window).height();
-            var scrolltop = $(window).scrollTop();
-
-            console.log(window_size);
-            console.log(scrolltop);
+        $('[data-lightbox]').click(function(){
+            FB.Canvas.scrollTo(0,0);
         });
     });
 </script>
