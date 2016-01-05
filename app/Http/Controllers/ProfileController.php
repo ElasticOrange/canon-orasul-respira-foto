@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\DB;
 
 class ProfileController extends Controller
 {
+    private $pictures_lazy_load = 50;
+
     public function postIndex($profileId)
     {
         return $this->getIndex($profileId);
@@ -51,17 +53,28 @@ class ProfileController extends Controller
 
             $user = User::where('id', '=', $profile->user_id)->first();
             $data = array(
-                'selectedPage' => -1,
+                'selectedPage' => 1,
                 'profile' => $profile,
                 'user' => $user,
                 'fbLink' => $fb->getLoginUrl(['email']),
-                'votes' => $profile->votes()->where('isActive', '1')->get(),
+                'votes' => $profile->votes()->where('isActive', '1')->paginate($this->pictures_lazy_load),
                 'voted' => $voted,
                 'photos' => $photos,
                 'pageUrl' => env('BASE_FB_URL').'profile/index/'.$profile->id,
             );
 
             return view('profile.index', $data);
+        } else {
+            echo 'profile not found';
+        }
+    }
+
+    public function getPicturesLazyLoad($profileId)
+    {
+        $profile = Profile::where('id', '=', $profileId)->first();
+
+        if ($profile && $profile->isActive == 1) {
+            $votes = $profile->votes()->where('isActive', '1')->take(50)->get();
         } else {
             echo 'profile not found';
         }

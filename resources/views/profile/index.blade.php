@@ -146,7 +146,8 @@
 
         <p class="normal-text" style="margin-top: 30px; margin-bottom: 30px;">Galerie foto susținători ({{count($votes)}})</p>
 
-        <div style="text-align: center; margin-left: 10px; margin-bottom: 10px;">
+
+        <div style="text-align: center; margin-left: 10px; margin-bottom: 10px;" data-pictures-lazy-load="true">
         @foreach ($votes as $vote)
             <div class="wide-thumbnail vote-gallery">
                 <a href="{{generatePhotoURL('full', $vote->photo, true)}}" data-lightbox="voturi" id="vote{{$vote->id}}">
@@ -160,6 +161,8 @@
         @endforeach
             <div class="clearfix"></div>
         </div>
+
+        {!! $votes->render() !!}
 
     </div>
 
@@ -294,6 +297,14 @@
                 // Debug response (optional)
                 console.log(response);
             });
+        });
+
+        $(window).scroll(function(){
+            var window_size = $(window).height();
+            var scrolltop = $(window).scrollTop();
+
+            console.log(window_size);
+            console.log(scrolltop);
         });
     });
 </script>
