@@ -18,7 +18,14 @@ class AdminController extends Controller
     {
         $profiles = Profile::where('checked', 0)->where('isActive', 1)->get();
 
-        return view('admin/index', ['profiles' => $profiles]);
+        return view(
+            'admin/index',
+            [
+                'profiles' => $profiles,
+                'total_active_profiles' => Profile::where('isActive', 1)->count(),
+                'total_active_votes' => Vote::where('isActive', 1)->count(),
+            ]
+        );
     }
 
     public function getDisapproveProfile($profileId)

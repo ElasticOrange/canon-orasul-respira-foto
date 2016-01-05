@@ -3,6 +3,14 @@
 @section('content')
     <div class="row">
         <div class="col-md-12">
+            <h2>Statistici</h2>
+            <h3>Profile active: {{ $total_active_profiles }}</h3>
+            <h3>Voturi active: {{ $total_active_votes }}</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
             <h1>
                 Profile ce trebuie aprobate
             </h1>
