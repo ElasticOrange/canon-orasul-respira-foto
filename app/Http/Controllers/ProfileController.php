@@ -58,6 +58,7 @@ class ProfileController extends Controller
                 'user' => $user,
                 'fbLink' => $fb->getLoginUrl(['email']),
                 'votes' => $profile->votes()->where('isActive', '1')->paginate($this->pictures_lazy_load),
+                'total_votes' => $profile->votes()->where('isActive', '1')->count(),
                 'voted' => $voted,
                 'photos' => $photos,
                 'pageUrl' => env('BASE_FB_URL').'profile/index/'.$profile->id,
