@@ -35,13 +35,13 @@
                         </td>
                         <td>
                             <div class="btn-group">
-                                <a href="/admin/approve-vote/{{ $vote->id }}" type="button" onClick="" class="btn btn-success">
+                                <a href="/admin/approve-vote/{{ $vote->id }}" type="button" data-httprequest="true" class="btn btn-success">
                                     <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                                     Aproba
                                 </a>
                             </div>
                             <div class="btn-group">
-                                <a href="/admin/disapprove-vote/{{ $vote->id }}" type="button" class="btn btn-danger">
+                                <a href="/admin/disapprove-vote/{{ $vote->id }}" type="button" data-httprequest="true" class="btn btn-danger">
                                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                                     Ascunde
                                 </a>
@@ -53,17 +53,26 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12 text-center">
-            {!! $votes->render() !!}
-        </div>
-    </div>
-
-<style type="text/javascript">
+<script type="text/javascript">
 $(document).ready(function(){
-    alert(2);
-});
-</style>
+    $('[data-httprequest=true]').click(function(e){
+        e.preventDefault();
 
+        var $current_row = $(this).closest('tr');
+        $current_row.addClass('info');
+
+        $.ajax(
+            $(this).attr('href'),
+            {
+                complete: function(s, t){
+                    if (t === "success" && s.status === 200) {
+                        $current_row.hide();
+                    }
+                }
+            }
+        );
+    });
+});
+</script>
 
 @endsection
