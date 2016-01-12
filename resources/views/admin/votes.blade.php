@@ -1,6 +1,7 @@
 @extends('admin/layouts/master')
 
 @section('content')
+
     <div class="row">
         <div class="col-md-12">
             <h1>
@@ -30,7 +31,7 @@
                         </td>
                         <td>
                             @if ($vote->photo)
-                                <img src="{{ generatePhotoURL('thumb_132', $vote->photo, true) }}" />
+                                <img data-original="{{ generatePhotoURL('thumb_132', $vote->photo, true) }}" data-lazyload="true" />
                             @endif
                         </td>
                         <td>
@@ -53,26 +54,28 @@
         </div>
     </div>
 
-<script type="text/javascript">
-$(document).ready(function(){
-    $('[data-httprequest=true]').click(function(e){
-        e.preventDefault();
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('[data-httprequest=true]').click(function(e){
+            e.preventDefault();
 
-        var $current_row = $(this).closest('tr');
-        $current_row.addClass('info');
+            var $current_row = $(this).closest('tr');
+            $current_row.addClass('info');
 
-        $.ajax(
-            $(this).attr('href'),
-            {
-                complete: function(s, t){
-                    if (t === "success" && s.status === 200) {
-                        $current_row.hide();
+            $.ajax(
+                $(this).attr('href'),
+                {
+                    complete: function(s, t){
+                        if (t === "success" && s.status === 200) {
+                            $current_row.hide();
+                        }
                     }
                 }
-            }
-        );
+            );
+        });
+
+        $('[data-lazyload=true]').lazyload();
     });
-});
-</script>
+    </script>
 
 @endsection

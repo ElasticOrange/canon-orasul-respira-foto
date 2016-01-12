@@ -44,23 +44,23 @@
                         </td>
                         <td>
                             @if ($profile->photo1)
-                                <img src="{{generatePhotoURL('thumb_180',$profile->photo1)}}" />
+                                <img data-original="{{generatePhotoURL('thumb_180',$profile->photo1)}}" data-lazyload="true" />
                             @endif
 
                             @if ($profile->photo2)
-                                <img src="{{generatePhotoURL('thumb_180',$profile->photo2)}}" />
+                                <img data-original="{{generatePhotoURL('thumb_180',$profile->photo2)}}" data-lazyload="true" />
                             @endif
 
                             @if ($profile->photo3)
-                                <img src="{{generatePhotoURL('thumb_180',$profile->photo3)}}" />
+                                <img data-original="{{generatePhotoURL('thumb_180',$profile->photo3)}}" data-lazyload="true" />
                             @endif
 
                             @if ($profile->photo4)
-                                <img src="{{generatePhotoURL('thumb_180',$profile->photo4)}}" />
+                                <img data-original="{{generatePhotoURL('thumb_180',$profile->photo4)}}" data-lazyload="true" />
                             @endif
 
                             @if ($profile->photo5)
-                                <img src="{{generatePhotoURL('thumb_180',$profile->photo5)}}" />
+                                <img data-original="{{generatePhotoURL('thumb_180',$profile->photo5)}}" data-lazyload="true" />
                             @endif
                         </td>
                         <td>
@@ -102,6 +102,8 @@ $(document).ready(function(){
             }
         );
     });
+
+    $('[data-lazyload=true]').lazyload();
 });
 </script>
 

@@ -14,8 +14,9 @@
         <!-- Bootstrap core CSS -->
         <link href="{{ asset('/admin/css/bootstrap.min.css') }}" rel="stylesheet" />
         <link href="{{ asset('/admin/css/style.css') }}" rel="stylesheet" />
-        
+
         <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script src="/js/vendor/jquery.lazyload.js"></script>
     </head>
 
   <body>
