@@ -31,7 +31,7 @@
                         </td>
                         <td>
                             @if ($vote->photo)
-                                <img data-original="{{ generatePhotoURL('thumb_132', $vote->photo, true) }}" data-lazyload="true" />
+                                <img data-original="{{ generatePhotoURL('thumb_132', $vote->photo, true) }}" width="132" data-lazyload="true" />
                             @endif
                         </td>
                         <td>
