@@ -35,7 +35,7 @@
                         </td>
                         <td>
                             <div class="btn-group">
-                                <a href="/admin/approve-vote/{{ $vote->id }}" type="button" class="btn btn-success">
+                                <a href="/admin/approve-vote/{{ $vote->id }}" type="button" onClick="" class="btn btn-success">
                                     <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                                     Aproba
                                 </a>
@@ -53,6 +53,17 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-md-12 text-center">
+            {!! $votes->render() !!}
+        </div>
+    </div>
+
+<style type="text/javascript">
+$(document).ready(function(){
+    alert(2);
+});
+</style>
 
 
 @endsection

@@ -52,7 +52,7 @@ class AdminController extends Controller
 
     public function getVotes()
     {
-        $votes = Vote::where('checked', 0)->where('isActive', 1)->get();
+        $votes = Vote::where('checked', 0)->where('isActive', 1)->paginate(15);
 
         return view('admin/votes', ['votes' => $votes]);
     }
