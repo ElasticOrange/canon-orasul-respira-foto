@@ -258,6 +258,7 @@
         }
 
         $("#vote").click(function(e){
+            location.href = "{{ action('HomeController@getGameOver') }}";
             if ( addedPhoto ){
                 showModal();
             }
