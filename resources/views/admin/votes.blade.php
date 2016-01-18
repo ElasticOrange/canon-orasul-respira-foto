@@ -18,6 +18,9 @@
                         Nume
                     </th>
                     <th>
+                        Vot pentru
+                    </th>
+                    <th>
                         <span class="glyphicon glyphicon-glyphicon glyphicon-picture" aria-hidden="true"></span>
                     </th>
                     <th class="col-md-3">
@@ -28,6 +31,9 @@
                     <tr>
                         <td>
                             {{ $vote->user->name }}
+                        </td>
+                        <td>
+                            {{ $vote->profile->user->name }}
                         </td>
                         <td>
                             @if ($vote->photo)
