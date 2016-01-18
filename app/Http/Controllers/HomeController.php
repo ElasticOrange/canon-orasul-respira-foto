@@ -31,4 +31,11 @@ class HomeController extends Controller
     {
         return '<script>top.location = "https://www.facebook.com/canonromania/app/1059827974029585/";</script>';
     }
+
+    public function getGameOver()
+    {
+        $data = array('selectedPage' => 0);
+
+        return view('home.gameover', $data);
+    }
 }

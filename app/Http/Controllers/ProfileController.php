@@ -98,6 +98,8 @@ class ProfileController extends Controller
 
     public function postSubmitVote(Request $request)
     {
+        return redirect()->action('HomeController@getGameOver');
+
         if (!Auth::id()) {
             return response()->json(
                 [

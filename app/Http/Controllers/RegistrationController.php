@@ -22,6 +22,8 @@ class RegistrationController extends Controller
             return redirect('/profile/index/'.$profile->id);
         }
 
+        return redirect()->action('HomeController@getGameOver');
+
         if ($profile->shortLink==""){
             $profile->user_id = Auth::id();
             $profile->shortLink = shortenUrl( $_ENV['BASE_FB_URL'].'profile/index/'.$profile->id );
@@ -50,6 +52,8 @@ class RegistrationController extends Controller
 
     public function postSubmitEntry(Request $request)
     {
+        return redirect()->action('HomeController@getGameOver');
+
         if (!Auth::id()){
             return response()->json([
                     'message' => 'user not found'
@@ -96,5 +100,5 @@ class RegistrationController extends Controller
             'photos' => $photos
         );
         return view('register.preview',$data);
-    }    
+    }
 }
