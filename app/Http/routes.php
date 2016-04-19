@@ -16,12 +16,11 @@ Route::group(['middleware' => 'auth'], function () {
 
 });
 
-// Route::group(function () {
 Route::controller('/admin', 'AdminController');
-// });
 
 Route::controller('/profile', 'ProfileController');
 Route::controller('/facebook', 'FacebookController');
 Route::controller('/upload-image', 'UploadImageController');
 Route::controller('/cum-functioneaza', 'HowItWorksController');
+Route::controller('/easter', 'EasterController');
 Route::controller('/', 'HomeController');
