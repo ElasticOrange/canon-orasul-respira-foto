@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <a href="http://google.com">
+        <a href="http://www.canon.ro/where_to_buy/for_home">
             <img src="/easter-tab/facebook-tab-Easter.png" />
         </a>
     </body>
